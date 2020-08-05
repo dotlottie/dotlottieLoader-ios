@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'dotLottieLoader_Example' do
+  pod 'dotLottieLoader', :path => '../'
+
+  target 'dotLottieLoader_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
