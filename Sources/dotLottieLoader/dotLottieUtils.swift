@@ -72,23 +72,23 @@ public struct dotLottieUtils {
 extension URL {
     
     /// Checks if url is a lottie file
-    var isDotLottieFile: Bool {
+    public var isDotLottieFile: Bool {
         return pathExtension == dotLottieUtils.dotLottieExtension
     }
     
     /// Checks if url is a json file
-    var isJsonFile: Bool {
+    public var isJsonFile: Bool {
         return pathExtension == dotLottieUtils.jsonExtension
     }
     
     /// Checks if url has already been downloaded
-    var isFileDownloaded: Bool {
+    public var isLottieFileDownloaded: Bool {
         let url = dotLottieUtils.downloadsDirectoryURL(for: self)
         return FileManager.default.fileExists(atPath: url.path)
     }
     
     /// Checks if url has been decompressed
-    var isFileDecompressed: Bool {
+    public var isLottieFileDecompressed: Bool {
         let url = dotLottieUtils.animationsDirectoryURL(for: self)
             .appendingPathComponent(dotLottieFile.animationsFolderName)
         var isDirectory: ObjCBool = false
@@ -100,7 +100,7 @@ extension URL {
     }
     
     /// Checks if file is remote
-    var isRemoteFile: Bool {
+    public var isRemoteFile: Bool {
         return absoluteString.contains("http")
     }
 }

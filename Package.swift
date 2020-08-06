@@ -5,22 +5,24 @@ import PackageDescription
 
 let package = Package(
     name: "dotLottieLoader",
+    platforms: [
+        .iOS(.v9),
+        .macOS(.v10_12),
+        .tvOS(.v9),
+        .watchOS(.v6)
+    ],
     products: [
-        // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
             name: "dotLottieLoader",
             targets: ["dotLottieLoader"]),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
+        .package(name: "Zip", url: "https://github.com/marmelroy/Zip.git", from: "2.0.0"),
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "dotLottieLoader",
-            dependencies: []),
+            dependencies: ["Zip"]),
         .testTarget(
             name: "dotLottieLoaderTests",
             dependencies: ["dotLottieLoader"]),
