@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'dotLottieLoader'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of dotLottieLoader.'
+  s.summary          = 'An iOS library to natively load .lottie files https://dotlottie.io/'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,23 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+dotLottieLoader is an open-source file format that aggregates one or more Lottie files and their associated resources into a single file. They are ZIP archives compressed with the Deflate compression method and carry the file extension of .lottie.
                        DESC
 
-  s.homepage         = 'https://github.com/eharrison/dotLottieLoader'
+  s.homepage         = 'https://github.com/dotLottie/dotLottieLoader-ios'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'eharrison' => 'evandro@itsdayoff.com' }
-  s.source           = { :git => 'https://github.com/eharrison/dotLottieLoader.git', :tag => s.version.to_s }
+  s.author           = { 'eharrison' => 'evandro.hoffmann@gmail.com' }
+  s.source           = { :git => 'https://github.com/dotLottie/dotLottieLoader-ios.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.swift_version = '5.0'
+  s.ios.deployment_target = '9.0'
+  s.osx.deployment_target = '10.10'
+  s.tvos.deployment_target = '9.0'
+  s.watchos.deployment_target = '6.0'
 
-  s.source_files = 'dotLottieLoader/Classes/**/*'
+  s.source_files = 'Sources/**/*'
   
-  # s.resource_bundles = {
-  #   'dotLottieLoader' => ['dotLottieLoader/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Zip', '~> 1.1'
 end

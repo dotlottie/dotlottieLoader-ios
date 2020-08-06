@@ -9,3 +9,7 @@ target 'dotLottieLoader_Example' do
     
   end
 end
+
+target 'dotLottieLoader_watchos Extension' do
+  pod 'dotLottieLoader', :path => '../'
+end

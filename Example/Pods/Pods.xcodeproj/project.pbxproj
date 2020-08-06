@@ -1,0 +1,1565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08CF1BEC7460217FF073A951F6B222F8 /* dotLottieCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E12DEA275754C83548A211D728E45F /* dotLottieCache.swift */; };
+		0CF8A72688909364206B5205C6E5C97E /* Zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F3F07B84C85E1D40F7B7CE1E1D6ED23 /* Zip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19763EFB8061F85372C71DE826085AEB /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 06F0C1A6CE19108F6CBEA597D9AE75BA /* zip.c */; };
+		215752BC2C637FB4A5137BB85C41E6B7 /* dotLottieLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24568ACDD338DF0BBD5482C0192F9CD0 /* dotLottieLoader.swift */; };
+		23450965B39E351FCBB06E1251EA495A /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F0EE7012250723CF380D163ACE24477 /* unzip.c */; };
+		28729229CC1DD7348651492CA99F12E4 /* Pods-dotLottieLoader_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 72266599C92BCD6D844C109DFAC1E492 /* Pods-dotLottieLoader_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A9697F2D7564CD6FAA048FD1ABD2E59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D97B9E86E2D96367CD6E556088C1B4A /* Foundation.framework */; };
+		2B1F573F6C000B78B5CD83F883A202CA /* Pods-dotLottieLoader_watchos Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BBF539C7D77132D50B95D53B7E9E953 /* Pods-dotLottieLoader_watchos Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E1A695DFE9D42BFD2162509DBAED526 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = F68E17F98966D0A1C0F94B93EB282CA9 /* crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2F3C59DF7E007A05F9C8046B88114809 /* dotLottieLoader-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 244685BE5B34762FAE640451FE66CE9C /* dotLottieLoader-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F709EDD67C6D88AAD97277D0DE63159 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404D09274A89E1F2A8A8A1451C715843 /* Foundation.framework */; };
+		305EFC8665461DE83A201F16349A7FFA /* dotLottieUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC167FC21DEB21FA3EBFFF34E9BD1EC8 /* dotLottieUtils.swift */; };
+		363C8886AE20666CA7F7EAD725FE0EA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D97B9E86E2D96367CD6E556088C1B4A /* Foundation.framework */; };
+		3C5ADC9FEBD494DC3717D5C380F2BE65 /* Pods-dotLottieLoader_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E6510DE49145A19B2A8854E7CB044F0E /* Pods-dotLottieLoader_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		47F3085FD325F7577ECD17151B4D19E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D97B9E86E2D96367CD6E556088C1B4A /* Foundation.framework */; };
+		4A85663C5FD5DF93B24740B175A68331 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 045E96CC34EEC8345457CEA214262ECE /* ioapi.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4EB03DF59B4588DC2B1928BE39064DCF /* Zip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4D0C454CE21AA9672D3F1DBDD7FE7B /* Zip.framework */; };
+		50E8603C736FDB29835F921D5C7662F2 /* Zip-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D206D3ED00C8DA0CCDAD9C2F014827B /* Zip-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53D2251593577FC345505E3B4D737DBB /* Zip-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BCA8ED52FD27935D2D05857D19A09AD7 /* Zip-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5538832A75AC04F1B41F5D50C68A1789 /* dotLottieLoader-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3710C85E801A23E3024E0B5ED76601A3 /* dotLottieLoader-watchOS-dummy.m */; };
+		5BB9CED7F0D6E87C3B5E23FC2D432E57 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = BAB5BF054A207193361660895FC01A85 /* unzip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5C155480D0AD4BBDE8815215863A9F5C /* Zip-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FD50435DE6A9E821BE8104374F74A6 /* Zip-watchOS-dummy.m */; };
+		63636F2A3158789EF86C37967D99CE98 /* dotLottieUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC167FC21DEB21FA3EBFFF34E9BD1EC8 /* dotLottieUtils.swift */; };
+		6ACEE2E7B99A4E1ADDDA21F9886DD833 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 045E96CC34EEC8345457CEA214262ECE /* ioapi.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6AD52FD945993536B98EE5A3C385608B /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = D798C1CF43C9E7BB81DFE49408335C1E /* zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		70F87507873628BCC20217481C8F1DFA /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 0DE99ECA8C10E925D64451BC9B2D8CB1 /* ioapi.c */; };
+		72BBDC69E80CC91B382D7058D00DF634 /* dotLottieLoader-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A29D83E8A884C427D03E5D50AFA362E8 /* dotLottieLoader-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76B42F2A73659CB866C43133F3276187 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = F68E17F98966D0A1C0F94B93EB282CA9 /* crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8C1802A2B62166C48DDCF18A961DB846 /* dotLottieFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6509E8C84824B4846ED72833CE18A1B5 /* dotLottieFile.swift */; };
+		8E0702512B1C65B6CA6AE62D45ACB89F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404D09274A89E1F2A8A8A1451C715843 /* Foundation.framework */; };
+		8F569CB52C19EA06D6A9422A30B996A5 /* dotLottieLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24568ACDD338DF0BBD5482C0192F9CD0 /* dotLottieLoader.swift */; };
+		8F7A61F8CE83D8E4D34E3D15E068E990 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = D798C1CF43C9E7BB81DFE49408335C1E /* zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		93EABEF8030DF3764B2A85EFE5123431 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 06F0C1A6CE19108F6CBEA597D9AE75BA /* zip.c */; };
+		9424A721C6B475575DE7235FB8ADD588 /* Pods-dotLottieLoader_watchos Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C5600E579B709E4C82FEFAF1179958 /* Pods-dotLottieLoader_watchos Extension-dummy.m */; };
+		9595ADE42A7622C582D3BFD13969E066 /* Zip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7F1A0B9FFC57E58164A0B5A94B5400 /* Zip.swift */; };
+		A6D40FD65615AB7DB62310FFB829AD12 /* Zip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7F1A0B9FFC57E58164A0B5A94B5400 /* Zip.swift */; };
+		A6DC531FFEFB69EC37F941D03CCECDA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D97B9E86E2D96367CD6E556088C1B4A /* Foundation.framework */; };
+		AD8AA84FDCA9A3E9767373FB416E56A3 /* QuickZip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C46C0F85964CC0F3F966D3074F4A /* QuickZip.swift */; };
+		AD90F83857D771BB0CEE486046EC04B2 /* dotLottieCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E12DEA275754C83548A211D728E45F /* dotLottieCache.swift */; };
+		ADD1FD8A39554C04434F337103D4463E /* Zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F3F07B84C85E1D40F7B7CE1E1D6ED23 /* Zip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B65A9F0EB03BF66460A772662A139E8B /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = BAB5BF054A207193361660895FC01A85 /* unzip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BE834D2E5C60A1A5A5059829E241019A /* dotLottieFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6509E8C84824B4846ED72833CE18A1B5 /* dotLottieFile.swift */; };
+		C16C7EE3F6B8E3D30FAD6D0F0409B868 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 0DE99ECA8C10E925D64451BC9B2D8CB1 /* ioapi.c */; };
+		C473DE5475614A41F9E641AC88F307A3 /* Pods-dotLottieLoader_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0407F2F43138D8EF30D1750D1D062632 /* Pods-dotLottieLoader_Tests-dummy.m */; };
+		C7C16452207DA4B85BF00B727D764515 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404D09274A89E1F2A8A8A1451C715843 /* Foundation.framework */; };
+		C93F2D36F310D4A22571A9C1155DFA23 /* dotLottieManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6997F0ACE9F49152C601C2E99294939 /* dotLottieManifest.swift */; };
+		CED17858DE5DF9D65052FFAF2A2AF350 /* Zip-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AD03E2DDC7361E2393B386D1CD3B81 /* Zip-iOS-dummy.m */; };
+		D61B1DDAEE05A8048822E2AF1AA396A2 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F0EE7012250723CF380D163ACE24477 /* unzip.c */; };
+		EB31105FC0B87C96CCB907262BF7AA93 /* dotLottieManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6997F0ACE9F49152C601C2E99294939 /* dotLottieManifest.swift */; };
+		EFCBA8A94D9E97903752D9C5484445EC /* ZipUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E6A330CB8C9A6D89FB542AB4D01F0C /* ZipUtilities.swift */; };
+		F12148B6ADEECB2F2EA0DA5CC1C377A5 /* QuickZip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C46C0F85964CC0F3F966D3074F4A /* QuickZip.swift */; };
+		F63EDD8FF8083BB4117EC0A92F701C12 /* ZipUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E6A330CB8C9A6D89FB542AB4D01F0C /* ZipUtilities.swift */; };
+		F6CCF99B26F3E92EBBF9DCF71DBE440A /* Zip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4D0C454CE21AA9672D3F1DBDD7FE7B /* Zip.framework */; };
+		FBE096D990D861B80DC0746EFCE6C029 /* Pods-dotLottieLoader_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E50D02BC8FD73365491D34DAE766C8 /* Pods-dotLottieLoader_Example-dummy.m */; };
+		FF94A034FCBFE01E3AE764E289F7B1F2 /* dotLottieLoader-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C70AAF1549161D10ADA188FD8C9F6A20 /* dotLottieLoader-iOS-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E31B28A4413C6A1E2847374D9A6C0CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D2F5A13B6BC00BDF96873A4F888E4A5;
+			remoteInfo = "dotLottieLoader-watchOS";
+		};
+		3B6FDE2B08F3FF3F970BD14C9DD6A647 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBEB8C8C204C145056204D8C3AF186CF;
+			remoteInfo = "Zip-iOS";
+		};
+		61EB44DD4A7A449B4F168C7DB2832E48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57D3C5AF2EDF1D3774D57972DD7935CB;
+			remoteInfo = "dotLottieLoader-iOS";
+		};
+		8A5199C1481748D7700B68D9BDBCE8E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBEB8C8C204C145056204D8C3AF186CF;
+			remoteInfo = "Zip-iOS";
+		};
+		9042898B01DE2860FA8A3E9073491B19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D14374A87964DEA545379DF0ED0B715A;
+			remoteInfo = "Zip-watchOS";
+		};
+		AB9E4F4A6C3BA65CED3CF4340EBCA295 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D14374A87964DEA545379DF0ED0B715A;
+			remoteInfo = "Zip-watchOS";
+		};
+		E7C040E56DC1DC2CBFEE742927961CAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF0502B6472A4ED4D6D082E5396B82C2;
+			remoteInfo = "Pods-dotLottieLoader_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0407F2F43138D8EF30D1750D1D062632 /* Pods-dotLottieLoader_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dotLottieLoader_Tests-dummy.m"; sourceTree = "<group>"; };
+		045E96CC34EEC8345457CEA214262ECE /* ioapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi.h; path = Zip/minizip/ioapi.h; sourceTree = "<group>"; };
+		050096F7854508F3206766059174AF4A /* Pods-dotLottieLoader_watchos Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-dotLottieLoader_watchos Extension-acknowledgements.plist"; sourceTree = "<group>"; };
+		06C767AA7141B66F7C7E94C424DE8527 /* Pods-dotLottieLoader_watchos Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-dotLottieLoader_watchos Extension-frameworks.sh"; sourceTree = "<group>"; };
+		06F0C1A6CE19108F6CBEA597D9AE75BA /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = zip.c; path = Zip/minizip/zip.c; sourceTree = "<group>"; };
+		07DCE7B48DB5A5054BA4F37382D29C3A /* Pods-dotLottieLoader_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-dotLottieLoader_Example.release.xcconfig"; sourceTree = "<group>"; };
+		09D11E33948EF3596853658CE266A288 /* Pods-dotLottieLoader_watchos Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-dotLottieLoader_watchos Extension.release.xcconfig"; sourceTree = "<group>"; };
+		0D97B9E86E2D96367CD6E556088C1B4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0DE99ECA8C10E925D64451BC9B2D8CB1 /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi.c; path = Zip/minizip/ioapi.c; sourceTree = "<group>"; };
+		0F3F07B84C85E1D40F7B7CE1E1D6ED23 /* Zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Zip.h; path = Zip/Zip.h; sourceTree = "<group>"; };
+		0F4D0C454CE21AA9672D3F1DBDD7FE7B /* Zip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Zip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FEDBFE72938A0EAEC44332FABF23CA2 /* Zip-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Zip-watchOS.modulemap"; path = "../Zip-watchOS/Zip-watchOS.modulemap"; sourceTree = "<group>"; };
+		129835B788B1B9E32870C5EFF134D5D6 /* Pods_dotLottieLoader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_dotLottieLoader_Tests.framework; path = "Pods-dotLottieLoader_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		145B35998571D99D18B6DA9296B86957 /* Zip-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Zip-watchOS-prefix.pch"; path = "../Zip-watchOS/Zip-watchOS-prefix.pch"; sourceTree = "<group>"; };
+		1AEE7118D31CA241C07C048F25975132 /* Zip-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Zip-iOS-Info.plist"; sourceTree = "<group>"; };
+		1E3382DFBA840B4EC1E3EC3B8702474A /* Pods-dotLottieLoader_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-dotLottieLoader_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1E358F0A45792FD4CEC372B1424E6CAB /* dotLottieLoader-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "dotLottieLoader-watchOS-prefix.pch"; path = "../dotLottieLoader-watchOS/dotLottieLoader-watchOS-prefix.pch"; sourceTree = "<group>"; };
+		244685BE5B34762FAE640451FE66CE9C /* dotLottieLoader-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "dotLottieLoader-watchOS-umbrella.h"; path = "../dotLottieLoader-watchOS/dotLottieLoader-watchOS-umbrella.h"; sourceTree = "<group>"; };
+		24568ACDD338DF0BBD5482C0192F9CD0 /* dotLottieLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = dotLottieLoader.swift; path = Sources/dotLottieLoader/dotLottieLoader.swift; sourceTree = "<group>"; };
+		24AD6A0398BD7BE3321405E5D7757031 /* dotLottieLoader-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "dotLottieLoader-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		27E48395C79A5E7361E79FF374E8FDD1 /* Pods-dotLottieLoader_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-dotLottieLoader_Example.modulemap"; sourceTree = "<group>"; };
+		2BBF539C7D77132D50B95D53B7E9E953 /* Pods-dotLottieLoader_watchos Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-dotLottieLoader_watchos Extension-umbrella.h"; sourceTree = "<group>"; };
+		2D7F1A0B9FFC57E58164A0B5A94B5400 /* Zip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Zip.swift; path = Zip/Zip.swift; sourceTree = "<group>"; };
+		341EBE49BC63611403180DDEC23F8962 /* Pods-dotLottieLoader_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-dotLottieLoader_Example-Info.plist"; sourceTree = "<group>"; };
+		36FC833A392E36381A81E04C786FB190 /* Pods-dotLottieLoader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-dotLottieLoader_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		3710C85E801A23E3024E0B5ED76601A3 /* dotLottieLoader-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "dotLottieLoader-watchOS-dummy.m"; path = "../dotLottieLoader-watchOS/dotLottieLoader-watchOS-dummy.m"; sourceTree = "<group>"; };
+		404D09274A89E1F2A8A8A1451C715843 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4E8FC0F132CAA885582AE49CF7274FB0 /* Pods-dotLottieLoader_watchos Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-dotLottieLoader_watchos Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		4F0EE7012250723CF380D163ACE24477 /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = unzip.c; path = Zip/minizip/unzip.c; sourceTree = "<group>"; };
+		50B79C470243C52ACFA19ED318E9DE11 /* Pods-dotLottieLoader_watchos Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-dotLottieLoader_watchos Extension.modulemap"; sourceTree = "<group>"; };
+		58E50D02BC8FD73365491D34DAE766C8 /* Pods-dotLottieLoader_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dotLottieLoader_Example-dummy.m"; sourceTree = "<group>"; };
+		5A3842CE3827A0286EA66F385C4A2F4A /* Pods-dotLottieLoader_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-dotLottieLoader_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		5EFF315BEE48371B60C5A5569A4BD29C /* Pods-dotLottieLoader_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-dotLottieLoader_Example-frameworks.sh"; sourceTree = "<group>"; };
+		6509E8C84824B4846ED72833CE18A1B5 /* dotLottieFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = dotLottieFile.swift; path = Sources/dotLottieLoader/dotLottieFile.swift; sourceTree = "<group>"; };
+		68A086C42F5FF6DD7C896F9FE2BB81FC /* Pods-dotLottieLoader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-dotLottieLoader_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		6F5BE91CF8B7927A645868E309E74793 /* Pods_dotLottieLoader_watchos_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_dotLottieLoader_watchos_Extension.framework; path = "Pods-dotLottieLoader_watchos Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		712A0E0C1C0C98A05E7D38560C8538B2 /* Pods_dotLottieLoader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_dotLottieLoader_Example.framework; path = "Pods-dotLottieLoader_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		714C9CD9CD39C1F2ACEDB01DB3D0B5C7 /* dotLottieLoader-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "dotLottieLoader-watchOS.release.xcconfig"; path = "../dotLottieLoader-watchOS/dotLottieLoader-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		72266599C92BCD6D844C109DFAC1E492 /* Pods-dotLottieLoader_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-dotLottieLoader_Tests-umbrella.h"; sourceTree = "<group>"; };
+		76C5600E579B709E4C82FEFAF1179958 /* Pods-dotLottieLoader_watchos Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dotLottieLoader_watchos Extension-dummy.m"; sourceTree = "<group>"; };
+		781774A50C48C8AD9A2F0C3121A2096D /* dotLottieLoader.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = dotLottieLoader.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7976CD2BE72C5641340BC7C4CA255B11 /* Pods-dotLottieLoader_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-dotLottieLoader_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7CBB9B4810491B0A1C34A04EA89E0E65 /* dotLottieLoader-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "dotLottieLoader-watchOS.debug.xcconfig"; path = "../dotLottieLoader-watchOS/dotLottieLoader-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		7D206D3ED00C8DA0CCDAD9C2F014827B /* Zip-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Zip-watchOS-umbrella.h"; path = "../Zip-watchOS/Zip-watchOS-umbrella.h"; sourceTree = "<group>"; };
+		7E3FE8490E8EB9CC5B0DDA176A05C90F /* Zip-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Zip-iOS.modulemap"; sourceTree = "<group>"; };
+		81B22BDAA57046080B8A32116048986B /* dotLottieLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = dotLottieLoader.framework; path = "dotLottieLoader-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82FD50435DE6A9E821BE8104374F74A6 /* Zip-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Zip-watchOS-dummy.m"; path = "../Zip-watchOS/Zip-watchOS-dummy.m"; sourceTree = "<group>"; };
+		83CD85A4DCF824F585FB5FA29932DA30 /* dotLottieLoader-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "dotLottieLoader-iOS.modulemap"; sourceTree = "<group>"; };
+		85B0BE1DFFD990E2F153A056886182A3 /* dotLottieLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = dotLottieLoader.framework; path = "dotLottieLoader-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E634C94313AFC429D3A48CA5C9ED3F0 /* Pods-dotLottieLoader_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-dotLottieLoader_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		95AD03E2DDC7361E2393B386D1CD3B81 /* Zip-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Zip-iOS-dummy.m"; sourceTree = "<group>"; };
+		961C9055EA5C4CA23C53F5066BE07A42 /* dotLottieLoader-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "dotLottieLoader-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		9B45957AB60A6935859CFE122FD6B20A /* Pods-dotLottieLoader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-dotLottieLoader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9CA925DE9357783D03999FD9B4B0D882 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DE1A1DE279060574E39A324D004EDBF /* Pods-dotLottieLoader_watchos Extension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-dotLottieLoader_watchos Extension-Info.plist"; sourceTree = "<group>"; };
+		A090ABB55875B40CA746A4C44FCD89E6 /* Zip-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Zip-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		A29D83E8A884C427D03E5D50AFA362E8 /* dotLottieLoader-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "dotLottieLoader-iOS-umbrella.h"; sourceTree = "<group>"; };
+		A6FA9AE22477E45B1964492CCA65A694 /* Zip-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Zip-iOS-prefix.pch"; sourceTree = "<group>"; };
+		AB9D428DC9A3BD4030C6BBFA811FE763 /* dotLottieLoader-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "dotLottieLoader-watchOS.modulemap"; path = "../dotLottieLoader-watchOS/dotLottieLoader-watchOS.modulemap"; sourceTree = "<group>"; };
+		B0E04C829B3F5F861102E430DA29E3C9 /* Zip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Zip.framework; path = "Zip-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1FC6F800339604E35B031C93DAB1BCD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		B2F91ABC4D12843CFC13963DA9976EF0 /* dotLottieLoader-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "dotLottieLoader-iOS-Info.plist"; sourceTree = "<group>"; };
+		B8101884073ACDE51ABD733C5F49126F /* Zip-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Zip-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BAB5BF054A207193361660895FC01A85 /* unzip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = Zip/minizip/unzip.h; sourceTree = "<group>"; };
+		BC167FC21DEB21FA3EBFFF34E9BD1EC8 /* dotLottieUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = dotLottieUtils.swift; path = Sources/dotLottieLoader/dotLottieUtils.swift; sourceTree = "<group>"; };
+		BCA8ED52FD27935D2D05857D19A09AD7 /* Zip-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Zip-iOS-umbrella.h"; sourceTree = "<group>"; };
+		C1E12DEA275754C83548A211D728E45F /* dotLottieCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = dotLottieCache.swift; path = Sources/dotLottieLoader/dotLottieCache.swift; sourceTree = "<group>"; };
+		C6997F0ACE9F49152C601C2E99294939 /* dotLottieManifest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = dotLottieManifest.swift; path = Sources/dotLottieLoader/dotLottieManifest.swift; sourceTree = "<group>"; };
+		C70AAF1549161D10ADA188FD8C9F6A20 /* dotLottieLoader-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "dotLottieLoader-iOS-dummy.m"; sourceTree = "<group>"; };
+		CF1FD00439DF65093F14DA4B0443F571 /* dotLottieLoader-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "dotLottieLoader-iOS-prefix.pch"; sourceTree = "<group>"; };
+		D26081AA1DBE9EE06D81D43281CF3D30 /* dotLottieLoader-watchOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "dotLottieLoader-watchOS-Info.plist"; path = "../dotLottieLoader-watchOS/dotLottieLoader-watchOS-Info.plist"; sourceTree = "<group>"; };
+		D58ED5D6E4950950767D643EFB1C3A53 /* Zip-watchOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Zip-watchOS-Info.plist"; path = "../Zip-watchOS/Zip-watchOS-Info.plist"; sourceTree = "<group>"; };
+		D798C1CF43C9E7BB81DFE49408335C1E /* zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = zip.h; path = Zip/minizip/zip.h; sourceTree = "<group>"; };
+		D85FF4C5335CF1AACB88B2473B306F24 /* Pods-dotLottieLoader_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-dotLottieLoader_Tests-Info.plist"; sourceTree = "<group>"; };
+		DB29C46C0F85964CC0F3F966D3074F4A /* QuickZip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickZip.swift; path = Zip/QuickZip.swift; sourceTree = "<group>"; };
+		DB39F4C662E831B0011F9B0E6AF8461E /* Pods-dotLottieLoader_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-dotLottieLoader_Tests.modulemap"; sourceTree = "<group>"; };
+		E6510DE49145A19B2A8854E7CB044F0E /* Pods-dotLottieLoader_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-dotLottieLoader_Example-umbrella.h"; sourceTree = "<group>"; };
+		E950EBF5B5D7FAC02225F3FABE339BC8 /* Zip-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Zip-watchOS.release.xcconfig"; path = "../Zip-watchOS/Zip-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		EDD6B767B02C0447AE546F87D2077AC4 /* Zip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Zip.framework; path = "Zip-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2E6A330CB8C9A6D89FB542AB4D01F0C /* ZipUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZipUtilities.swift; path = Zip/ZipUtilities.swift; sourceTree = "<group>"; };
+		F43BD1FFDE231B8D75DC06AE7B69164C /* Zip-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Zip-watchOS.debug.xcconfig"; path = "../Zip-watchOS/Zip-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F68E17F98966D0A1C0F94B93EB282CA9 /* crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = Zip/minizip/crypt.h; sourceTree = "<group>"; };
+		F949E5DF1483093C84A6518F71749B5A /* Pods-dotLottieLoader_watchos Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-dotLottieLoader_watchos Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25257E2A06FF24208F818A696A4E64F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A9697F2D7564CD6FAA048FD1ABD2E59 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42D12EE65DC3D223A6124A939A6F9E89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E0702512B1C65B6CA6AE62D45ACB89F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46AD2CDC36A10A33584DEB05C0F3AED8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47F3085FD325F7577ECD17151B4D19E2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		613D451E1A2B1711CBF054E4355393CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				363C8886AE20666CA7F7EAD725FE0EA4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF9E88BD18124B5E910063E9D37149EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6DC531FFEFB69EC37F941D03CCECDA4 /* Foundation.framework in Frameworks */,
+				4EB03DF59B4588DC2B1928BE39064DCF /* Zip.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4A4C2962C95212DBBE42EC645E4062 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F709EDD67C6D88AAD97277D0DE63159 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6F2F2AC2DD2EE03CC3FB166DFB8ACB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7C16452207DA4B85BF00B727D764515 /* Foundation.framework in Frameworks */,
+				F6CCF99B26F3E92EBBF9DCF71DBE440A /* Zip.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DE6CE98ED92C31E507404A385E2AEA4 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				404D09274A89E1F2A8A8A1451C715843 /* Foundation.framework */,
+			);
+			name = watchOS;
+			sourceTree = "<group>";
+		};
+		23BFF5E77379214D97EF8548574DA95F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				83CD85A4DCF824F585FB5FA29932DA30 /* dotLottieLoader-iOS.modulemap */,
+				C70AAF1549161D10ADA188FD8C9F6A20 /* dotLottieLoader-iOS-dummy.m */,
+				B2F91ABC4D12843CFC13963DA9976EF0 /* dotLottieLoader-iOS-Info.plist */,
+				CF1FD00439DF65093F14DA4B0443F571 /* dotLottieLoader-iOS-prefix.pch */,
+				A29D83E8A884C427D03E5D50AFA362E8 /* dotLottieLoader-iOS-umbrella.h */,
+				961C9055EA5C4CA23C53F5066BE07A42 /* dotLottieLoader-iOS.debug.xcconfig */,
+				24AD6A0398BD7BE3321405E5D7757031 /* dotLottieLoader-iOS.release.xcconfig */,
+				AB9D428DC9A3BD4030C6BBFA811FE763 /* dotLottieLoader-watchOS.modulemap */,
+				3710C85E801A23E3024E0B5ED76601A3 /* dotLottieLoader-watchOS-dummy.m */,
+				D26081AA1DBE9EE06D81D43281CF3D30 /* dotLottieLoader-watchOS-Info.plist */,
+				1E358F0A45792FD4CEC372B1424E6CAB /* dotLottieLoader-watchOS-prefix.pch */,
+				244685BE5B34762FAE640451FE66CE9C /* dotLottieLoader-watchOS-umbrella.h */,
+				7CBB9B4810491B0A1C34A04EA89E0E65 /* dotLottieLoader-watchOS.debug.xcconfig */,
+				714C9CD9CD39C1F2ACEDB01DB3D0B5C7 /* dotLottieLoader-watchOS.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/dotLottieLoader-iOS";
+			sourceTree = "<group>";
+		};
+		2C7BB1ADED017E71AC2C2346AB04521B /* Pods-dotLottieLoader_Example */ = {
+			isa = PBXGroup;
+			children = (
+				27E48395C79A5E7361E79FF374E8FDD1 /* Pods-dotLottieLoader_Example.modulemap */,
+				8E634C94313AFC429D3A48CA5C9ED3F0 /* Pods-dotLottieLoader_Example-acknowledgements.markdown */,
+				5A3842CE3827A0286EA66F385C4A2F4A /* Pods-dotLottieLoader_Example-acknowledgements.plist */,
+				58E50D02BC8FD73365491D34DAE766C8 /* Pods-dotLottieLoader_Example-dummy.m */,
+				5EFF315BEE48371B60C5A5569A4BD29C /* Pods-dotLottieLoader_Example-frameworks.sh */,
+				341EBE49BC63611403180DDEC23F8962 /* Pods-dotLottieLoader_Example-Info.plist */,
+				E6510DE49145A19B2A8854E7CB044F0E /* Pods-dotLottieLoader_Example-umbrella.h */,
+				68A086C42F5FF6DD7C896F9FE2BB81FC /* Pods-dotLottieLoader_Example.debug.xcconfig */,
+				07DCE7B48DB5A5054BA4F37382D29C3A /* Pods-dotLottieLoader_Example.release.xcconfig */,
+			);
+			name = "Pods-dotLottieLoader_Example";
+			path = "Target Support Files/Pods-dotLottieLoader_Example";
+			sourceTree = "<group>";
+		};
+		4085201906DE8ECBA4A79C39ECD705C7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7E3FE8490E8EB9CC5B0DDA176A05C90F /* Zip-iOS.modulemap */,
+				95AD03E2DDC7361E2393B386D1CD3B81 /* Zip-iOS-dummy.m */,
+				1AEE7118D31CA241C07C048F25975132 /* Zip-iOS-Info.plist */,
+				A6FA9AE22477E45B1964492CCA65A694 /* Zip-iOS-prefix.pch */,
+				BCA8ED52FD27935D2D05857D19A09AD7 /* Zip-iOS-umbrella.h */,
+				B8101884073ACDE51ABD733C5F49126F /* Zip-iOS.debug.xcconfig */,
+				A090ABB55875B40CA746A4C44FCD89E6 /* Zip-iOS.release.xcconfig */,
+				0FEDBFE72938A0EAEC44332FABF23CA2 /* Zip-watchOS.modulemap */,
+				82FD50435DE6A9E821BE8104374F74A6 /* Zip-watchOS-dummy.m */,
+				D58ED5D6E4950950767D643EFB1C3A53 /* Zip-watchOS-Info.plist */,
+				145B35998571D99D18B6DA9296B86957 /* Zip-watchOS-prefix.pch */,
+				7D206D3ED00C8DA0CCDAD9C2F014827B /* Zip-watchOS-umbrella.h */,
+				F43BD1FFDE231B8D75DC06AE7B69164C /* Zip-watchOS.debug.xcconfig */,
+				E950EBF5B5D7FAC02225F3FABE339BC8 /* Zip-watchOS.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Zip-iOS";
+			sourceTree = "<group>";
+		};
+		5DDE29E3B18144EE580065ABA1893E0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F4D0C454CE21AA9672D3F1DBDD7FE7B /* Zip.framework */,
+				E09BB6DFEE88325F854B488EB1A77471 /* iOS */,
+				0DE6CE98ED92C31E507404A385E2AEA4 /* watchOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		68BC5CCC7BA00DBB36C810DC70A02214 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C7BB1ADED017E71AC2C2346AB04521B /* Pods-dotLottieLoader_Example */,
+				8E4AB66228112FE437841FA779869485 /* Pods-dotLottieLoader_Tests */,
+				D0DAAAD1B0C7550B79309612949AC2F0 /* Pods-dotLottieLoader_watchos Extension */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7017534CC974C336521BC5C80368AB10 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9DFA7A61F60B34A9E3BFF96789E53C4 /* dotLottieLoader */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		8E4AB66228112FE437841FA779869485 /* Pods-dotLottieLoader_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DB39F4C662E831B0011F9B0E6AF8461E /* Pods-dotLottieLoader_Tests.modulemap */,
+				7976CD2BE72C5641340BC7C4CA255B11 /* Pods-dotLottieLoader_Tests-acknowledgements.markdown */,
+				1E3382DFBA840B4EC1E3EC3B8702474A /* Pods-dotLottieLoader_Tests-acknowledgements.plist */,
+				0407F2F43138D8EF30D1750D1D062632 /* Pods-dotLottieLoader_Tests-dummy.m */,
+				D85FF4C5335CF1AACB88B2473B306F24 /* Pods-dotLottieLoader_Tests-Info.plist */,
+				72266599C92BCD6D844C109DFAC1E492 /* Pods-dotLottieLoader_Tests-umbrella.h */,
+				9B45957AB60A6935859CFE122FD6B20A /* Pods-dotLottieLoader_Tests.debug.xcconfig */,
+				36FC833A392E36381A81E04C786FB190 /* Pods-dotLottieLoader_Tests.release.xcconfig */,
+			);
+			name = "Pods-dotLottieLoader_Tests";
+			path = "Target Support Files/Pods-dotLottieLoader_Tests";
+			sourceTree = "<group>";
+		};
+		958A6E3898066CC5E34B027DB32AFA36 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				781774A50C48C8AD9A2F0C3121A2096D /* dotLottieLoader.podspec */,
+				B1FC6F800339604E35B031C93DAB1BCD /* LICENSE */,
+				9CA925DE9357783D03999FD9B4B0D882 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		A4F2E94E30BBA74A40EA91CEF3091A3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C20A506E0D31862D7050A5D11EB09FA9 /* Zip */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A7635C2261AC99C0387C3B605DB3C263 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81B22BDAA57046080B8A32116048986B /* dotLottieLoader.framework */,
+				85B0BE1DFFD990E2F153A056886182A3 /* dotLottieLoader.framework */,
+				712A0E0C1C0C98A05E7D38560C8538B2 /* Pods_dotLottieLoader_Example.framework */,
+				129835B788B1B9E32870C5EFF134D5D6 /* Pods_dotLottieLoader_Tests.framework */,
+				6F5BE91CF8B7927A645868E309E74793 /* Pods_dotLottieLoader_watchos_Extension.framework */,
+				EDD6B767B02C0447AE546F87D2077AC4 /* Zip.framework */,
+				B0E04C829B3F5F861102E430DA29E3C9 /* Zip.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C20A506E0D31862D7050A5D11EB09FA9 /* Zip */ = {
+			isa = PBXGroup;
+			children = (
+				F68E17F98966D0A1C0F94B93EB282CA9 /* crypt.h */,
+				0DE99ECA8C10E925D64451BC9B2D8CB1 /* ioapi.c */,
+				045E96CC34EEC8345457CEA214262ECE /* ioapi.h */,
+				DB29C46C0F85964CC0F3F966D3074F4A /* QuickZip.swift */,
+				4F0EE7012250723CF380D163ACE24477 /* unzip.c */,
+				BAB5BF054A207193361660895FC01A85 /* unzip.h */,
+				06F0C1A6CE19108F6CBEA597D9AE75BA /* zip.c */,
+				D798C1CF43C9E7BB81DFE49408335C1E /* zip.h */,
+				0F3F07B84C85E1D40F7B7CE1E1D6ED23 /* Zip.h */,
+				2D7F1A0B9FFC57E58164A0B5A94B5400 /* Zip.swift */,
+				F2E6A330CB8C9A6D89FB542AB4D01F0C /* ZipUtilities.swift */,
+				4085201906DE8ECBA4A79C39ECD705C7 /* Support Files */,
+			);
+			name = Zip;
+			path = Zip;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				7017534CC974C336521BC5C80368AB10 /* Development Pods */,
+				5DDE29E3B18144EE580065ABA1893E0A /* Frameworks */,
+				A4F2E94E30BBA74A40EA91CEF3091A3A /* Pods */,
+				A7635C2261AC99C0387C3B605DB3C263 /* Products */,
+				68BC5CCC7BA00DBB36C810DC70A02214 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D0DAAAD1B0C7550B79309612949AC2F0 /* Pods-dotLottieLoader_watchos Extension */ = {
+			isa = PBXGroup;
+			children = (
+				50B79C470243C52ACFA19ED318E9DE11 /* Pods-dotLottieLoader_watchos Extension.modulemap */,
+				F949E5DF1483093C84A6518F71749B5A /* Pods-dotLottieLoader_watchos Extension-acknowledgements.markdown */,
+				050096F7854508F3206766059174AF4A /* Pods-dotLottieLoader_watchos Extension-acknowledgements.plist */,
+				76C5600E579B709E4C82FEFAF1179958 /* Pods-dotLottieLoader_watchos Extension-dummy.m */,
+				06C767AA7141B66F7C7E94C424DE8527 /* Pods-dotLottieLoader_watchos Extension-frameworks.sh */,
+				9DE1A1DE279060574E39A324D004EDBF /* Pods-dotLottieLoader_watchos Extension-Info.plist */,
+				2BBF539C7D77132D50B95D53B7E9E953 /* Pods-dotLottieLoader_watchos Extension-umbrella.h */,
+				4E8FC0F132CAA885582AE49CF7274FB0 /* Pods-dotLottieLoader_watchos Extension.debug.xcconfig */,
+				09D11E33948EF3596853658CE266A288 /* Pods-dotLottieLoader_watchos Extension.release.xcconfig */,
+			);
+			name = "Pods-dotLottieLoader_watchos Extension";
+			path = "Target Support Files/Pods-dotLottieLoader_watchos Extension";
+			sourceTree = "<group>";
+		};
+		E09BB6DFEE88325F854B488EB1A77471 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0D97B9E86E2D96367CD6E556088C1B4A /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F9DFA7A61F60B34A9E3BFF96789E53C4 /* dotLottieLoader */ = {
+			isa = PBXGroup;
+			children = (
+				C1E12DEA275754C83548A211D728E45F /* dotLottieCache.swift */,
+				6509E8C84824B4846ED72833CE18A1B5 /* dotLottieFile.swift */,
+				24568ACDD338DF0BBD5482C0192F9CD0 /* dotLottieLoader.swift */,
+				C6997F0ACE9F49152C601C2E99294939 /* dotLottieManifest.swift */,
+				BC167FC21DEB21FA3EBFFF34E9BD1EC8 /* dotLottieUtils.swift */,
+				958A6E3898066CC5E34B027DB32AFA36 /* Pod */,
+				23BFF5E77379214D97EF8548574DA95F /* Support Files */,
+			);
+			name = dotLottieLoader;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2A38189689B4849737CD41E42CC7EDFC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C5ADC9FEBD494DC3717D5C380F2BE65 /* Pods-dotLottieLoader_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56DDF43568D42767EE22C84FB1596965 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76B42F2A73659CB866C43133F3276187 /* crypt.h in Headers */,
+				6ACEE2E7B99A4E1ADDDA21F9886DD833 /* ioapi.h in Headers */,
+				B65A9F0EB03BF66460A772662A139E8B /* unzip.h in Headers */,
+				53D2251593577FC345505E3B4D737DBB /* Zip-iOS-umbrella.h in Headers */,
+				ADD1FD8A39554C04434F337103D4463E /* Zip.h in Headers */,
+				6AD52FD945993536B98EE5A3C385608B /* zip.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B8CF6FCDCD6683654F9B91CF1EE4AE0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F3C59DF7E007A05F9C8046B88114809 /* dotLottieLoader-watchOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		806B1E4EF1C7389571F61A5B20076CCB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28729229CC1DD7348651492CA99F12E4 /* Pods-dotLottieLoader_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98CECDDD71D0C36961A7299E40D78DC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E1A695DFE9D42BFD2162509DBAED526 /* crypt.h in Headers */,
+				4A85663C5FD5DF93B24740B175A68331 /* ioapi.h in Headers */,
+				5BB9CED7F0D6E87C3B5E23FC2D432E57 /* unzip.h in Headers */,
+				50E8603C736FDB29835F921D5C7662F2 /* Zip-watchOS-umbrella.h in Headers */,
+				0CF8A72688909364206B5205C6E5C97E /* Zip.h in Headers */,
+				8F7A61F8CE83D8E4D34E3D15E068E990 /* zip.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C393FE7EB93294E3883CE16AB4DC67B3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B1F573F6C000B78B5CD83F883A202CA /* Pods-dotLottieLoader_watchos Extension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4882026AC7F7A363E8A70A488CE83B9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72BBDC69E80CC91B382D7058D00DF634 /* dotLottieLoader-iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		57D3C5AF2EDF1D3774D57972DD7935CB /* dotLottieLoader-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6AB2FB8E19DB75A085BDFD58D70F7CD /* Build configuration list for PBXNativeTarget "dotLottieLoader-iOS" */;
+			buildPhases = (
+				C4882026AC7F7A363E8A70A488CE83B9 /* Headers */,
+				227396BF099E33CA531A751E634C3C44 /* Sources */,
+				AF9E88BD18124B5E910063E9D37149EC /* Frameworks */,
+				BB69112C1904B68D8E9521E8B559A266 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEB71D46D4141659A6130713474BDF45 /* PBXTargetDependency */,
+			);
+			name = "dotLottieLoader-iOS";
+			productName = "dotLottieLoader-iOS";
+			productReference = 81B22BDAA57046080B8A32116048986B /* dotLottieLoader.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5D2F5A13B6BC00BDF96873A4F888E4A5 /* dotLottieLoader-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F042D83F10DFBAC473B5F98CC866CE4E /* Build configuration list for PBXNativeTarget "dotLottieLoader-watchOS" */;
+			buildPhases = (
+				7B8CF6FCDCD6683654F9B91CF1EE4AE0 /* Headers */,
+				D860FBD7B8B867B5AA7FAE152399B117 /* Sources */,
+				D6F2F2AC2DD2EE03CC3FB166DFB8ACB1 /* Frameworks */,
+				79AC0A926E130B2F5FD9EF4A8439A954 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38F9FC67B7585528AC7BA95A44EB3573 /* PBXTargetDependency */,
+			);
+			name = "dotLottieLoader-watchOS";
+			productName = "dotLottieLoader-watchOS";
+			productReference = 85B0BE1DFFD990E2F153A056886182A3 /* dotLottieLoader.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9F45E1E8B67C0905E92ABA64225E1746 /* Pods-dotLottieLoader_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5310787343CA0A38DBAC73143199EB1E /* Build configuration list for PBXNativeTarget "Pods-dotLottieLoader_Tests" */;
+			buildPhases = (
+				806B1E4EF1C7389571F61A5B20076CCB /* Headers */,
+				7B8C601591C49E4C6BD36D5CE6F07106 /* Sources */,
+				613D451E1A2B1711CBF054E4355393CD /* Frameworks */,
+				BB192371AA969C65BB6E385974EBB8BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0471A16EC1FEFAB88A48F90709B0D506 /* PBXTargetDependency */,
+			);
+			name = "Pods-dotLottieLoader_Tests";
+			productName = "Pods-dotLottieLoader_Tests";
+			productReference = 129835B788B1B9E32870C5EFF134D5D6 /* Pods_dotLottieLoader_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C0F8E085F191C51DBEE6AFD2E7829DC0 /* Pods-dotLottieLoader_watchos Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F011FE388E8718471052ED7AD84E2B7C /* Build configuration list for PBXNativeTarget "Pods-dotLottieLoader_watchos Extension" */;
+			buildPhases = (
+				C393FE7EB93294E3883CE16AB4DC67B3 /* Headers */,
+				D13800B4B64B8577799F60A2D391ED52 /* Sources */,
+				42D12EE65DC3D223A6124A939A6F9E89 /* Frameworks */,
+				A22F311DBB09B946810D71A4EDF8A95C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEBEEAC9A5BA03B72C5E7FA040D049AC /* PBXTargetDependency */,
+				031F0B6FA5FD0D963405DC047C11F0ED /* PBXTargetDependency */,
+			);
+			name = "Pods-dotLottieLoader_watchos Extension";
+			productName = "Pods-dotLottieLoader_watchos Extension";
+			productReference = 6F5BE91CF8B7927A645868E309E74793 /* Pods_dotLottieLoader_watchos_Extension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CBEB8C8C204C145056204D8C3AF186CF /* Zip-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5504E41EB54C0D5902A3D197167CA1AC /* Build configuration list for PBXNativeTarget "Zip-iOS" */;
+			buildPhases = (
+				56DDF43568D42767EE22C84FB1596965 /* Headers */,
+				1BF0857299016D5F78C74668B4B58A6B /* Sources */,
+				46AD2CDC36A10A33584DEB05C0F3AED8 /* Frameworks */,
+				873FD678CD275276806DD529EFCC1551 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Zip-iOS";
+			productName = "Zip-iOS";
+			productReference = EDD6B767B02C0447AE546F87D2077AC4 /* Zip.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D14374A87964DEA545379DF0ED0B715A /* Zip-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDE1B2B7DBFF6AB03E0B3B000682AE97 /* Build configuration list for PBXNativeTarget "Zip-watchOS" */;
+			buildPhases = (
+				A98CECDDD71D0C36961A7299E40D78DC /* Headers */,
+				7A1D3B4C6D67F4C21D3CF50E4311785B /* Sources */,
+				CE4A4C2962C95212DBBE42EC645E4062 /* Frameworks */,
+				F41ECB008D0FF2FFE734EC496C2D8C3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Zip-watchOS";
+			productName = "Zip-watchOS";
+			productReference = B0E04C829B3F5F861102E430DA29E3C9 /* Zip.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FF0502B6472A4ED4D6D082E5396B82C2 /* Pods-dotLottieLoader_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CD4FA112917106F99D5AD58EF52BA8A /* Build configuration list for PBXNativeTarget "Pods-dotLottieLoader_Example" */;
+			buildPhases = (
+				2A38189689B4849737CD41E42CC7EDFC /* Headers */,
+				259722A554D8AFA6C753E511220C32BC /* Sources */,
+				25257E2A06FF24208F818A696A4E64F8 /* Frameworks */,
+				94030C1D82F97201E4A216BA92ADB5A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35087D8D5672DA061E5B0C1A35D4021F /* PBXTargetDependency */,
+				6A7388793D47A8FD691DFE0C65D2D2B7 /* PBXTargetDependency */,
+			);
+			name = "Pods-dotLottieLoader_Example";
+			productName = "Pods-dotLottieLoader_Example";
+			productReference = 712A0E0C1C0C98A05E7D38560C8538B2 /* Pods_dotLottieLoader_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = A7635C2261AC99C0387C3B605DB3C263 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57D3C5AF2EDF1D3774D57972DD7935CB /* dotLottieLoader-iOS */,
+				5D2F5A13B6BC00BDF96873A4F888E4A5 /* dotLottieLoader-watchOS */,
+				FF0502B6472A4ED4D6D082E5396B82C2 /* Pods-dotLottieLoader_Example */,
+				9F45E1E8B67C0905E92ABA64225E1746 /* Pods-dotLottieLoader_Tests */,
+				C0F8E085F191C51DBEE6AFD2E7829DC0 /* Pods-dotLottieLoader_watchos Extension */,
+				CBEB8C8C204C145056204D8C3AF186CF /* Zip-iOS */,
+				D14374A87964DEA545379DF0ED0B715A /* Zip-watchOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79AC0A926E130B2F5FD9EF4A8439A954 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		873FD678CD275276806DD529EFCC1551 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94030C1D82F97201E4A216BA92ADB5A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A22F311DBB09B946810D71A4EDF8A95C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB192371AA969C65BB6E385974EBB8BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB69112C1904B68D8E9521E8B559A266 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F41ECB008D0FF2FFE734EC496C2D8C3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1BF0857299016D5F78C74668B4B58A6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C16C7EE3F6B8E3D30FAD6D0F0409B868 /* ioapi.c in Sources */,
+				F12148B6ADEECB2F2EA0DA5CC1C377A5 /* QuickZip.swift in Sources */,
+				23450965B39E351FCBB06E1251EA495A /* unzip.c in Sources */,
+				CED17858DE5DF9D65052FFAF2A2AF350 /* Zip-iOS-dummy.m in Sources */,
+				19763EFB8061F85372C71DE826085AEB /* zip.c in Sources */,
+				A6D40FD65615AB7DB62310FFB829AD12 /* Zip.swift in Sources */,
+				F63EDD8FF8083BB4117EC0A92F701C12 /* ZipUtilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		227396BF099E33CA531A751E634C3C44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08CF1BEC7460217FF073A951F6B222F8 /* dotLottieCache.swift in Sources */,
+				8C1802A2B62166C48DDCF18A961DB846 /* dotLottieFile.swift in Sources */,
+				FF94A034FCBFE01E3AE764E289F7B1F2 /* dotLottieLoader-iOS-dummy.m in Sources */,
+				215752BC2C637FB4A5137BB85C41E6B7 /* dotLottieLoader.swift in Sources */,
+				EB31105FC0B87C96CCB907262BF7AA93 /* dotLottieManifest.swift in Sources */,
+				305EFC8665461DE83A201F16349A7FFA /* dotLottieUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		259722A554D8AFA6C753E511220C32BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBE096D990D861B80DC0746EFCE6C029 /* Pods-dotLottieLoader_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A1D3B4C6D67F4C21D3CF50E4311785B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70F87507873628BCC20217481C8F1DFA /* ioapi.c in Sources */,
+				AD8AA84FDCA9A3E9767373FB416E56A3 /* QuickZip.swift in Sources */,
+				D61B1DDAEE05A8048822E2AF1AA396A2 /* unzip.c in Sources */,
+				5C155480D0AD4BBDE8815215863A9F5C /* Zip-watchOS-dummy.m in Sources */,
+				93EABEF8030DF3764B2A85EFE5123431 /* zip.c in Sources */,
+				9595ADE42A7622C582D3BFD13969E066 /* Zip.swift in Sources */,
+				EFCBA8A94D9E97903752D9C5484445EC /* ZipUtilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B8C601591C49E4C6BD36D5CE6F07106 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C473DE5475614A41F9E641AC88F307A3 /* Pods-dotLottieLoader_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D13800B4B64B8577799F60A2D391ED52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9424A721C6B475575DE7235FB8ADD588 /* Pods-dotLottieLoader_watchos Extension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D860FBD7B8B867B5AA7FAE152399B117 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD90F83857D771BB0CEE486046EC04B2 /* dotLottieCache.swift in Sources */,
+				BE834D2E5C60A1A5A5059829E241019A /* dotLottieFile.swift in Sources */,
+				5538832A75AC04F1B41F5D50C68A1789 /* dotLottieLoader-watchOS-dummy.m in Sources */,
+				8F569CB52C19EA06D6A9422A30B996A5 /* dotLottieLoader.swift in Sources */,
+				C93F2D36F310D4A22571A9C1155DFA23 /* dotLottieManifest.swift in Sources */,
+				63636F2A3158789EF86C37967D99CE98 /* dotLottieUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		031F0B6FA5FD0D963405DC047C11F0ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "dotLottieLoader-watchOS";
+			target = 5D2F5A13B6BC00BDF96873A4F888E4A5 /* dotLottieLoader-watchOS */;
+			targetProxy = 2E31B28A4413C6A1E2847374D9A6C0CB /* PBXContainerItemProxy */;
+		};
+		0471A16EC1FEFAB88A48F90709B0D506 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-dotLottieLoader_Example";
+			target = FF0502B6472A4ED4D6D082E5396B82C2 /* Pods-dotLottieLoader_Example */;
+			targetProxy = E7C040E56DC1DC2CBFEE742927961CAD /* PBXContainerItemProxy */;
+		};
+		35087D8D5672DA061E5B0C1A35D4021F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Zip-iOS";
+			target = CBEB8C8C204C145056204D8C3AF186CF /* Zip-iOS */;
+			targetProxy = 3B6FDE2B08F3FF3F970BD14C9DD6A647 /* PBXContainerItemProxy */;
+		};
+		38F9FC67B7585528AC7BA95A44EB3573 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Zip-watchOS";
+			target = D14374A87964DEA545379DF0ED0B715A /* Zip-watchOS */;
+			targetProxy = AB9E4F4A6C3BA65CED3CF4340EBCA295 /* PBXContainerItemProxy */;
+		};
+		6A7388793D47A8FD691DFE0C65D2D2B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "dotLottieLoader-iOS";
+			target = 57D3C5AF2EDF1D3774D57972DD7935CB /* dotLottieLoader-iOS */;
+			targetProxy = 61EB44DD4A7A449B4F168C7DB2832E48 /* PBXContainerItemProxy */;
+		};
+		EEBEEAC9A5BA03B72C5E7FA040D049AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Zip-watchOS";
+			target = D14374A87964DEA545379DF0ED0B715A /* Zip-watchOS */;
+			targetProxy = 9042898B01DE2860FA8A3E9073491B19 /* PBXContainerItemProxy */;
+		};
+		FEB71D46D4141659A6130713474BDF45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Zip-iOS";
+			target = CBEB8C8C204C145056204D8C3AF186CF /* Zip-iOS */;
+			targetProxy = 8A5199C1481748D7700B68D9BDBCE8E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		344D10BB72B226417320D2886DB0605C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07DCE7B48DB5A5054BA4F37382D29C3A /* Pods-dotLottieLoader_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-dotLottieLoader_Example/Pods-dotLottieLoader_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-dotLottieLoader_Example/Pods-dotLottieLoader_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		49949977463CE6AB50F9D1DF9F01DDED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68A086C42F5FF6DD7C896F9FE2BB81FC /* Pods-dotLottieLoader_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-dotLottieLoader_Example/Pods-dotLottieLoader_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-dotLottieLoader_Example/Pods-dotLottieLoader_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		51E9A9D182B481C33DA8BABCA959E20C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E950EBF5B5D7FAC02225F3FABE339BC8 /* Zip-watchOS.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Zip-watchOS/Zip-watchOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Zip-watchOS/Zip-watchOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Zip-watchOS/Zip-watchOS.modulemap";
+				PRODUCT_MODULE_NAME = Zip;
+				PRODUCT_NAME = Zip;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		59716FB546442329D84C121CFC244DDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F43BD1FFDE231B8D75DC06AE7B69164C /* Zip-watchOS.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Zip-watchOS/Zip-watchOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Zip-watchOS/Zip-watchOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Zip-watchOS/Zip-watchOS.modulemap";
+				PRODUCT_MODULE_NAME = Zip;
+				PRODUCT_NAME = Zip;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		5F12E5DFB208E8B8D90B25700DE3B401 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A090ABB55875B40CA746A4C44FCD89E6 /* Zip-iOS.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Zip-iOS/Zip-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Zip-iOS/Zip-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Zip-iOS/Zip-iOS.modulemap";
+				PRODUCT_MODULE_NAME = Zip;
+				PRODUCT_NAME = Zip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		65D69292530BFEFD67608987342C3A04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		694C5B6738E8D4537FED05B4D54CA4C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09D11E33948EF3596853658CE266A288 /* Pods-dotLottieLoader_watchos Extension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-dotLottieLoader_watchos Extension/Pods-dotLottieLoader_watchos Extension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-dotLottieLoader_watchos Extension/Pods-dotLottieLoader_watchos Extension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
+		7220748E6FF82AF90EF76E469EA33E90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 961C9055EA5C4CA23C53F5066BE07A42 /* dotLottieLoader-iOS.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/dotLottieLoader-iOS/dotLottieLoader-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/dotLottieLoader-iOS/dotLottieLoader-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/dotLottieLoader-iOS/dotLottieLoader-iOS.modulemap";
+				PRODUCT_MODULE_NAME = dotLottieLoader;
+				PRODUCT_NAME = dotLottieLoader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		777633428FD59BDFF492E7BD2CF5D1D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36FC833A392E36381A81E04C786FB190 /* Pods-dotLottieLoader_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-dotLottieLoader_Tests/Pods-dotLottieLoader_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-dotLottieLoader_Tests/Pods-dotLottieLoader_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		82438730EDD5FB3FB85B3813A5022901 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B45957AB60A6935859CFE122FD6B20A /* Pods-dotLottieLoader_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-dotLottieLoader_Tests/Pods-dotLottieLoader_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-dotLottieLoader_Tests/Pods-dotLottieLoader_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8C763CB22987ACF209C49E23D1C92F78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E8FC0F132CAA885582AE49CF7274FB0 /* Pods-dotLottieLoader_watchos Extension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-dotLottieLoader_watchos Extension/Pods-dotLottieLoader_watchos Extension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-dotLottieLoader_watchos Extension/Pods-dotLottieLoader_watchos Extension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		B783B12CE5F929D198BDFA90A4EA6C07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 714C9CD9CD39C1F2ACEDB01DB3D0B5C7 /* dotLottieLoader-watchOS.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/dotLottieLoader-watchOS/dotLottieLoader-watchOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/dotLottieLoader-watchOS/dotLottieLoader-watchOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/dotLottieLoader-watchOS/dotLottieLoader-watchOS.modulemap";
+				PRODUCT_MODULE_NAME = dotLottieLoader;
+				PRODUCT_NAME = dotLottieLoader;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		C7820810A668D2EA016207368BD98265 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CBB9B4810491B0A1C34A04EA89E0E65 /* dotLottieLoader-watchOS.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/dotLottieLoader-watchOS/dotLottieLoader-watchOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/dotLottieLoader-watchOS/dotLottieLoader-watchOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/dotLottieLoader-watchOS/dotLottieLoader-watchOS.modulemap";
+				PRODUCT_MODULE_NAME = dotLottieLoader;
+				PRODUCT_NAME = dotLottieLoader;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		C84E2AC6D4A56129D140C1B245E9B635 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
+		F823B8426A1651E1B97B0A5154ABFF74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8101884073ACDE51ABD733C5F49126F /* Zip-iOS.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Zip-iOS/Zip-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Zip-iOS/Zip-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Zip-iOS/Zip-iOS.modulemap";
+				PRODUCT_MODULE_NAME = Zip;
+				PRODUCT_NAME = Zip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FF510EB59E4E42DBD4AB3C3606663C06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24AD6A0398BD7BE3321405E5D7757031 /* dotLottieLoader-iOS.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/dotLottieLoader-iOS/dotLottieLoader-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/dotLottieLoader-iOS/dotLottieLoader-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/dotLottieLoader-iOS/dotLottieLoader-iOS.modulemap";
+				PRODUCT_MODULE_NAME = dotLottieLoader;
+				PRODUCT_NAME = dotLottieLoader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0CD4FA112917106F99D5AD58EF52BA8A /* Build configuration list for PBXNativeTarget "Pods-dotLottieLoader_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49949977463CE6AB50F9D1DF9F01DDED /* Debug */,
+				344D10BB72B226417320D2886DB0605C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65D69292530BFEFD67608987342C3A04 /* Debug */,
+				C84E2AC6D4A56129D140C1B245E9B635 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5310787343CA0A38DBAC73143199EB1E /* Build configuration list for PBXNativeTarget "Pods-dotLottieLoader_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82438730EDD5FB3FB85B3813A5022901 /* Debug */,
+				777633428FD59BDFF492E7BD2CF5D1D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5504E41EB54C0D5902A3D197167CA1AC /* Build configuration list for PBXNativeTarget "Zip-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F823B8426A1651E1B97B0A5154ABFF74 /* Debug */,
+				5F12E5DFB208E8B8D90B25700DE3B401 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6AB2FB8E19DB75A085BDFD58D70F7CD /* Build configuration list for PBXNativeTarget "dotLottieLoader-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7220748E6FF82AF90EF76E469EA33E90 /* Debug */,
+				FF510EB59E4E42DBD4AB3C3606663C06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDE1B2B7DBFF6AB03E0B3B000682AE97 /* Build configuration list for PBXNativeTarget "Zip-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59716FB546442329D84C121CFC244DDF /* Debug */,
+				51E9A9D182B481C33DA8BABCA959E20C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F011FE388E8718471052ED7AD84E2B7C /* Build configuration list for PBXNativeTarget "Pods-dotLottieLoader_watchos Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C763CB22987ACF209C49E23D1C92F78 /* Debug */,
+				694C5B6738E8D4537FED05B4D54CA4C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F042D83F10DFBAC473B5F98CC866CE4E /* Build configuration list for PBXNativeTarget "dotLottieLoader-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7820810A668D2EA016207368BD98265 /* Debug */,
+				B783B12CE5F929D198BDFA90A4EA6C07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
