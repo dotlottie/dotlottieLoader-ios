@@ -23,7 +23,6 @@ dotLottieLoader is a library to help downloading and deflating a .lottie file, g
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-
 ## Requirements
 
 - Swift 5.0
