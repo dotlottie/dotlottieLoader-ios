@@ -55,13 +55,13 @@ import dotLottieLoader
 
 ##### Enabling log
 ```swift
-dotLottieUtils.isLogEnabled = true
+DotLottieUtils.isLogEnabled = true
 ```
 
 ##### Loading from a local file
 
 ```swift
-dotLottieLoader.load(name: "animation") { (dotLottieFile) in
+DotLottieLoader.load(name: "animation") { (dotLottieFile) in
     // use dotLottieLoader.animationUrl to load the lottie animation as you normally would
 }
 ```
@@ -69,7 +69,7 @@ dotLottieLoader.load(name: "animation") { (dotLottieFile) in
 ##### Loading a remote file
 
 ```swift
-dotLottieLoader.load(from: URL(string:"https://dotlottie.io/sample_files/animation.lottie")!){ (dotLottieFile) in
+DotLottieLoader.load(from: URL(string:"https://dotlottie.io/sample_files/animation.lottie")!){ (dotLottieFile) in
     // use dotLottieLoader.animationUrl to load the lottie animation as you normally would
 }
 ``` 

@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08CF1BEC7460217FF073A951F6B222F8 /* dotLottieCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E12DEA275754C83548A211D728E45F /* dotLottieCache.swift */; };
+		08CF1BEC7460217FF073A951F6B222F8 /* DotLottieCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E12DEA275754C83548A211D728E45F /* DotLottieCache.swift */; };
 		0CF8A72688909364206B5205C6E5C97E /* Zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F3F07B84C85E1D40F7B7CE1E1D6ED23 /* Zip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		19763EFB8061F85372C71DE826085AEB /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 06F0C1A6CE19108F6CBEA597D9AE75BA /* zip.c */; };
-		215752BC2C637FB4A5137BB85C41E6B7 /* dotLottieLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24568ACDD338DF0BBD5482C0192F9CD0 /* dotLottieLoader.swift */; };
+		215752BC2C637FB4A5137BB85C41E6B7 /* DotLottieLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24568ACDD338DF0BBD5482C0192F9CD0 /* DotLottieLoader.swift */; };
 		23450965B39E351FCBB06E1251EA495A /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F0EE7012250723CF380D163ACE24477 /* unzip.c */; };
 		28729229CC1DD7348651492CA99F12E4 /* Pods-dotLottieLoader_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 72266599C92BCD6D844C109DFAC1E492 /* Pods-dotLottieLoader_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2A9697F2D7564CD6FAA048FD1ABD2E59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D97B9E86E2D96367CD6E556088C1B4A /* Foundation.framework */; };
@@ -18,7 +18,7 @@
 		2E1A695DFE9D42BFD2162509DBAED526 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = F68E17F98966D0A1C0F94B93EB282CA9 /* crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2F3C59DF7E007A05F9C8046B88114809 /* dotLottieLoader-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 244685BE5B34762FAE640451FE66CE9C /* dotLottieLoader-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F709EDD67C6D88AAD97277D0DE63159 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404D09274A89E1F2A8A8A1451C715843 /* Foundation.framework */; };
-		305EFC8665461DE83A201F16349A7FFA /* dotLottieUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC167FC21DEB21FA3EBFFF34E9BD1EC8 /* dotLottieUtils.swift */; };
+		305EFC8665461DE83A201F16349A7FFA /* DotLottieUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC167FC21DEB21FA3EBFFF34E9BD1EC8 /* DotLottieUtils.swift */; };
 		363C8886AE20666CA7F7EAD725FE0EA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D97B9E86E2D96367CD6E556088C1B4A /* Foundation.framework */; };
 		3C5ADC9FEBD494DC3717D5C380F2BE65 /* Pods-dotLottieLoader_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E6510DE49145A19B2A8854E7CB044F0E /* Pods-dotLottieLoader_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47F3085FD325F7577ECD17151B4D19E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D97B9E86E2D96367CD6E556088C1B4A /* Foundation.framework */; };
@@ -29,15 +29,15 @@
 		5538832A75AC04F1B41F5D50C68A1789 /* dotLottieLoader-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3710C85E801A23E3024E0B5ED76601A3 /* dotLottieLoader-watchOS-dummy.m */; };
 		5BB9CED7F0D6E87C3B5E23FC2D432E57 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = BAB5BF054A207193361660895FC01A85 /* unzip.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5C155480D0AD4BBDE8815215863A9F5C /* Zip-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FD50435DE6A9E821BE8104374F74A6 /* Zip-watchOS-dummy.m */; };
-		63636F2A3158789EF86C37967D99CE98 /* dotLottieUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC167FC21DEB21FA3EBFFF34E9BD1EC8 /* dotLottieUtils.swift */; };
+		63636F2A3158789EF86C37967D99CE98 /* DotLottieUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC167FC21DEB21FA3EBFFF34E9BD1EC8 /* DotLottieUtils.swift */; };
 		6ACEE2E7B99A4E1ADDDA21F9886DD833 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 045E96CC34EEC8345457CEA214262ECE /* ioapi.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6AD52FD945993536B98EE5A3C385608B /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = D798C1CF43C9E7BB81DFE49408335C1E /* zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		70F87507873628BCC20217481C8F1DFA /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 0DE99ECA8C10E925D64451BC9B2D8CB1 /* ioapi.c */; };
 		72BBDC69E80CC91B382D7058D00DF634 /* dotLottieLoader-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A29D83E8A884C427D03E5D50AFA362E8 /* dotLottieLoader-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76B42F2A73659CB866C43133F3276187 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = F68E17F98966D0A1C0F94B93EB282CA9 /* crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8C1802A2B62166C48DDCF18A961DB846 /* dotLottieFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6509E8C84824B4846ED72833CE18A1B5 /* dotLottieFile.swift */; };
+		8C1802A2B62166C48DDCF18A961DB846 /* DotLottieFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6509E8C84824B4846ED72833CE18A1B5 /* DotLottieFile.swift */; };
 		8E0702512B1C65B6CA6AE62D45ACB89F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404D09274A89E1F2A8A8A1451C715843 /* Foundation.framework */; };
-		8F569CB52C19EA06D6A9422A30B996A5 /* dotLottieLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24568ACDD338DF0BBD5482C0192F9CD0 /* dotLottieLoader.swift */; };
+		8F569CB52C19EA06D6A9422A30B996A5 /* DotLottieLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24568ACDD338DF0BBD5482C0192F9CD0 /* DotLottieLoader.swift */; };
 		8F7A61F8CE83D8E4D34E3D15E068E990 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = D798C1CF43C9E7BB81DFE49408335C1E /* zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		93EABEF8030DF3764B2A85EFE5123431 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 06F0C1A6CE19108F6CBEA597D9AE75BA /* zip.c */; };
 		9424A721C6B475575DE7235FB8ADD588 /* Pods-dotLottieLoader_watchos Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C5600E579B709E4C82FEFAF1179958 /* Pods-dotLottieLoader_watchos Extension-dummy.m */; };
@@ -45,17 +45,17 @@
 		A6D40FD65615AB7DB62310FFB829AD12 /* Zip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7F1A0B9FFC57E58164A0B5A94B5400 /* Zip.swift */; };
 		A6DC531FFEFB69EC37F941D03CCECDA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D97B9E86E2D96367CD6E556088C1B4A /* Foundation.framework */; };
 		AD8AA84FDCA9A3E9767373FB416E56A3 /* QuickZip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C46C0F85964CC0F3F966D3074F4A /* QuickZip.swift */; };
-		AD90F83857D771BB0CEE486046EC04B2 /* dotLottieCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E12DEA275754C83548A211D728E45F /* dotLottieCache.swift */; };
+		AD90F83857D771BB0CEE486046EC04B2 /* DotLottieCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E12DEA275754C83548A211D728E45F /* DotLottieCache.swift */; };
 		ADD1FD8A39554C04434F337103D4463E /* Zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F3F07B84C85E1D40F7B7CE1E1D6ED23 /* Zip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B65A9F0EB03BF66460A772662A139E8B /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = BAB5BF054A207193361660895FC01A85 /* unzip.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BE834D2E5C60A1A5A5059829E241019A /* dotLottieFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6509E8C84824B4846ED72833CE18A1B5 /* dotLottieFile.swift */; };
+		BE834D2E5C60A1A5A5059829E241019A /* DotLottieFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6509E8C84824B4846ED72833CE18A1B5 /* DotLottieFile.swift */; };
 		C16C7EE3F6B8E3D30FAD6D0F0409B868 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 0DE99ECA8C10E925D64451BC9B2D8CB1 /* ioapi.c */; };
 		C473DE5475614A41F9E641AC88F307A3 /* Pods-dotLottieLoader_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0407F2F43138D8EF30D1750D1D062632 /* Pods-dotLottieLoader_Tests-dummy.m */; };
 		C7C16452207DA4B85BF00B727D764515 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404D09274A89E1F2A8A8A1451C715843 /* Foundation.framework */; };
-		C93F2D36F310D4A22571A9C1155DFA23 /* dotLottieManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6997F0ACE9F49152C601C2E99294939 /* dotLottieManifest.swift */; };
+		C93F2D36F310D4A22571A9C1155DFA23 /* DotLottieManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6997F0ACE9F49152C601C2E99294939 /* DotLottieManifest.swift */; };
 		CED17858DE5DF9D65052FFAF2A2AF350 /* Zip-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AD03E2DDC7361E2393B386D1CD3B81 /* Zip-iOS-dummy.m */; };
 		D61B1DDAEE05A8048822E2AF1AA396A2 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F0EE7012250723CF380D163ACE24477 /* unzip.c */; };
-		EB31105FC0B87C96CCB907262BF7AA93 /* dotLottieManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6997F0ACE9F49152C601C2E99294939 /* dotLottieManifest.swift */; };
+		EB31105FC0B87C96CCB907262BF7AA93 /* DotLottieManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6997F0ACE9F49152C601C2E99294939 /* DotLottieManifest.swift */; };
 		EFCBA8A94D9E97903752D9C5484445EC /* ZipUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E6A330CB8C9A6D89FB542AB4D01F0C /* ZipUtilities.swift */; };
 		F12148B6ADEECB2F2EA0DA5CC1C377A5 /* QuickZip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29C46C0F85964CC0F3F966D3074F4A /* QuickZip.swift */; };
 		F63EDD8FF8083BB4117EC0A92F701C12 /* ZipUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E6A330CB8C9A6D89FB542AB4D01F0C /* ZipUtilities.swift */; };
@@ -121,21 +121,21 @@
 		045E96CC34EEC8345457CEA214262ECE /* ioapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi.h; path = Zip/minizip/ioapi.h; sourceTree = "<group>"; };
 		050096F7854508F3206766059174AF4A /* Pods-dotLottieLoader_watchos Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-dotLottieLoader_watchos Extension-acknowledgements.plist"; sourceTree = "<group>"; };
 		06C767AA7141B66F7C7E94C424DE8527 /* Pods-dotLottieLoader_watchos Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-dotLottieLoader_watchos Extension-frameworks.sh"; sourceTree = "<group>"; };
-		06F0C1A6CE19108F6CBEA597D9AE75BA /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = zip.c; path = Zip/minizip/zip.c; sourceTree = "<group>"; };
+		06F0C1A6CE19108F6CBEA597D9AE75BA /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = zip.c; path = Zip/minizip/zip.c; sourceTree = "<group>"; };
 		07DCE7B48DB5A5054BA4F37382D29C3A /* Pods-dotLottieLoader_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-dotLottieLoader_Example.release.xcconfig"; sourceTree = "<group>"; };
 		09D11E33948EF3596853658CE266A288 /* Pods-dotLottieLoader_watchos Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-dotLottieLoader_watchos Extension.release.xcconfig"; sourceTree = "<group>"; };
 		0D97B9E86E2D96367CD6E556088C1B4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		0DE99ECA8C10E925D64451BC9B2D8CB1 /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi.c; path = Zip/minizip/ioapi.c; sourceTree = "<group>"; };
+		0DE99ECA8C10E925D64451BC9B2D8CB1 /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ioapi.c; path = Zip/minizip/ioapi.c; sourceTree = "<group>"; };
 		0F3F07B84C85E1D40F7B7CE1E1D6ED23 /* Zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Zip.h; path = Zip/Zip.h; sourceTree = "<group>"; };
 		0F4D0C454CE21AA9672D3F1DBDD7FE7B /* Zip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Zip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FEDBFE72938A0EAEC44332FABF23CA2 /* Zip-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Zip-watchOS.modulemap"; path = "../Zip-watchOS/Zip-watchOS.modulemap"; sourceTree = "<group>"; };
-		129835B788B1B9E32870C5EFF134D5D6 /* Pods_dotLottieLoader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_dotLottieLoader_Tests.framework; path = "Pods-dotLottieLoader_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		129835B788B1B9E32870C5EFF134D5D6 /* Pods_dotLottieLoader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dotLottieLoader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		145B35998571D99D18B6DA9296B86957 /* Zip-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Zip-watchOS-prefix.pch"; path = "../Zip-watchOS/Zip-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		1AEE7118D31CA241C07C048F25975132 /* Zip-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Zip-iOS-Info.plist"; sourceTree = "<group>"; };
 		1E3382DFBA840B4EC1E3EC3B8702474A /* Pods-dotLottieLoader_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-dotLottieLoader_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		1E358F0A45792FD4CEC372B1424E6CAB /* dotLottieLoader-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "dotLottieLoader-watchOS-prefix.pch"; path = "../dotLottieLoader-watchOS/dotLottieLoader-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		244685BE5B34762FAE640451FE66CE9C /* dotLottieLoader-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "dotLottieLoader-watchOS-umbrella.h"; path = "../dotLottieLoader-watchOS/dotLottieLoader-watchOS-umbrella.h"; sourceTree = "<group>"; };
-		24568ACDD338DF0BBD5482C0192F9CD0 /* dotLottieLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = dotLottieLoader.swift; path = Sources/dotLottieLoader/dotLottieLoader.swift; sourceTree = "<group>"; };
+		24568ACDD338DF0BBD5482C0192F9CD0 /* DotLottieLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotLottieLoader.swift; path = Sources/dotLottieLoader/DotLottieLoader.swift; sourceTree = "<group>"; };
 		24AD6A0398BD7BE3321405E5D7757031 /* dotLottieLoader-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "dotLottieLoader-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		27E48395C79A5E7361E79FF374E8FDD1 /* Pods-dotLottieLoader_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-dotLottieLoader_Example.modulemap"; sourceTree = "<group>"; };
 		2BBF539C7D77132D50B95D53B7E9E953 /* Pods-dotLottieLoader_watchos Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-dotLottieLoader_watchos Extension-umbrella.h"; sourceTree = "<group>"; };
@@ -145,47 +145,47 @@
 		3710C85E801A23E3024E0B5ED76601A3 /* dotLottieLoader-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "dotLottieLoader-watchOS-dummy.m"; path = "../dotLottieLoader-watchOS/dotLottieLoader-watchOS-dummy.m"; sourceTree = "<group>"; };
 		404D09274A89E1F2A8A8A1451C715843 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4E8FC0F132CAA885582AE49CF7274FB0 /* Pods-dotLottieLoader_watchos Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-dotLottieLoader_watchos Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		4F0EE7012250723CF380D163ACE24477 /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = unzip.c; path = Zip/minizip/unzip.c; sourceTree = "<group>"; };
+		4F0EE7012250723CF380D163ACE24477 /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = unzip.c; path = Zip/minizip/unzip.c; sourceTree = "<group>"; };
 		50B79C470243C52ACFA19ED318E9DE11 /* Pods-dotLottieLoader_watchos Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-dotLottieLoader_watchos Extension.modulemap"; sourceTree = "<group>"; };
 		58E50D02BC8FD73365491D34DAE766C8 /* Pods-dotLottieLoader_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dotLottieLoader_Example-dummy.m"; sourceTree = "<group>"; };
 		5A3842CE3827A0286EA66F385C4A2F4A /* Pods-dotLottieLoader_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-dotLottieLoader_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		5EFF315BEE48371B60C5A5569A4BD29C /* Pods-dotLottieLoader_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-dotLottieLoader_Example-frameworks.sh"; sourceTree = "<group>"; };
-		6509E8C84824B4846ED72833CE18A1B5 /* dotLottieFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = dotLottieFile.swift; path = Sources/dotLottieLoader/dotLottieFile.swift; sourceTree = "<group>"; };
+		6509E8C84824B4846ED72833CE18A1B5 /* DotLottieFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotLottieFile.swift; path = Sources/dotLottieLoader/DotLottieFile.swift; sourceTree = "<group>"; };
 		68A086C42F5FF6DD7C896F9FE2BB81FC /* Pods-dotLottieLoader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-dotLottieLoader_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		6F5BE91CF8B7927A645868E309E74793 /* Pods_dotLottieLoader_watchos_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_dotLottieLoader_watchos_Extension.framework; path = "Pods-dotLottieLoader_watchos Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		712A0E0C1C0C98A05E7D38560C8538B2 /* Pods_dotLottieLoader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_dotLottieLoader_Example.framework; path = "Pods-dotLottieLoader_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F5BE91CF8B7927A645868E309E74793 /* Pods_dotLottieLoader_watchos_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dotLottieLoader_watchos_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		712A0E0C1C0C98A05E7D38560C8538B2 /* Pods_dotLottieLoader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dotLottieLoader_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		714C9CD9CD39C1F2ACEDB01DB3D0B5C7 /* dotLottieLoader-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "dotLottieLoader-watchOS.release.xcconfig"; path = "../dotLottieLoader-watchOS/dotLottieLoader-watchOS.release.xcconfig"; sourceTree = "<group>"; };
 		72266599C92BCD6D844C109DFAC1E492 /* Pods-dotLottieLoader_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-dotLottieLoader_Tests-umbrella.h"; sourceTree = "<group>"; };
 		76C5600E579B709E4C82FEFAF1179958 /* Pods-dotLottieLoader_watchos Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dotLottieLoader_watchos Extension-dummy.m"; sourceTree = "<group>"; };
-		781774A50C48C8AD9A2F0C3121A2096D /* dotLottieLoader.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = dotLottieLoader.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		781774A50C48C8AD9A2F0C3121A2096D /* dotLottieLoader.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = dotLottieLoader.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7976CD2BE72C5641340BC7C4CA255B11 /* Pods-dotLottieLoader_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-dotLottieLoader_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7CBB9B4810491B0A1C34A04EA89E0E65 /* dotLottieLoader-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "dotLottieLoader-watchOS.debug.xcconfig"; path = "../dotLottieLoader-watchOS/dotLottieLoader-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
 		7D206D3ED00C8DA0CCDAD9C2F014827B /* Zip-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Zip-watchOS-umbrella.h"; path = "../Zip-watchOS/Zip-watchOS-umbrella.h"; sourceTree = "<group>"; };
 		7E3FE8490E8EB9CC5B0DDA176A05C90F /* Zip-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Zip-iOS.modulemap"; sourceTree = "<group>"; };
-		81B22BDAA57046080B8A32116048986B /* dotLottieLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = dotLottieLoader.framework; path = "dotLottieLoader-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81B22BDAA57046080B8A32116048986B /* dotLottieLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = dotLottieLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82FD50435DE6A9E821BE8104374F74A6 /* Zip-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Zip-watchOS-dummy.m"; path = "../Zip-watchOS/Zip-watchOS-dummy.m"; sourceTree = "<group>"; };
 		83CD85A4DCF824F585FB5FA29932DA30 /* dotLottieLoader-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "dotLottieLoader-iOS.modulemap"; sourceTree = "<group>"; };
-		85B0BE1DFFD990E2F153A056886182A3 /* dotLottieLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = dotLottieLoader.framework; path = "dotLottieLoader-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85B0BE1DFFD990E2F153A056886182A3 /* dotLottieLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = dotLottieLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E634C94313AFC429D3A48CA5C9ED3F0 /* Pods-dotLottieLoader_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-dotLottieLoader_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		95AD03E2DDC7361E2393B386D1CD3B81 /* Zip-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Zip-iOS-dummy.m"; sourceTree = "<group>"; };
 		961C9055EA5C4CA23C53F5066BE07A42 /* dotLottieLoader-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "dotLottieLoader-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9B45957AB60A6935859CFE122FD6B20A /* Pods-dotLottieLoader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-dotLottieLoader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		9CA925DE9357783D03999FD9B4B0D882 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9CA925DE9357783D03999FD9B4B0D882 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DE1A1DE279060574E39A324D004EDBF /* Pods-dotLottieLoader_watchos Extension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-dotLottieLoader_watchos Extension-Info.plist"; sourceTree = "<group>"; };
 		A090ABB55875B40CA746A4C44FCD89E6 /* Zip-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Zip-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A29D83E8A884C427D03E5D50AFA362E8 /* dotLottieLoader-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "dotLottieLoader-iOS-umbrella.h"; sourceTree = "<group>"; };
 		A6FA9AE22477E45B1964492CCA65A694 /* Zip-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Zip-iOS-prefix.pch"; sourceTree = "<group>"; };
 		AB9D428DC9A3BD4030C6BBFA811FE763 /* dotLottieLoader-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "dotLottieLoader-watchOS.modulemap"; path = "../dotLottieLoader-watchOS/dotLottieLoader-watchOS.modulemap"; sourceTree = "<group>"; };
-		B0E04C829B3F5F861102E430DA29E3C9 /* Zip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Zip.framework; path = "Zip-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1FC6F800339604E35B031C93DAB1BCD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		B0E04C829B3F5F861102E430DA29E3C9 /* Zip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Zip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1FC6F800339604E35B031C93DAB1BCD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B2F91ABC4D12843CFC13963DA9976EF0 /* dotLottieLoader-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "dotLottieLoader-iOS-Info.plist"; sourceTree = "<group>"; };
 		B8101884073ACDE51ABD733C5F49126F /* Zip-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Zip-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		BAB5BF054A207193361660895FC01A85 /* unzip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = Zip/minizip/unzip.h; sourceTree = "<group>"; };
-		BC167FC21DEB21FA3EBFFF34E9BD1EC8 /* dotLottieUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = dotLottieUtils.swift; path = Sources/dotLottieLoader/dotLottieUtils.swift; sourceTree = "<group>"; };
+		BC167FC21DEB21FA3EBFFF34E9BD1EC8 /* DotLottieUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotLottieUtils.swift; path = Sources/dotLottieLoader/DotLottieUtils.swift; sourceTree = "<group>"; };
 		BCA8ED52FD27935D2D05857D19A09AD7 /* Zip-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Zip-iOS-umbrella.h"; sourceTree = "<group>"; };
-		C1E12DEA275754C83548A211D728E45F /* dotLottieCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = dotLottieCache.swift; path = Sources/dotLottieLoader/dotLottieCache.swift; sourceTree = "<group>"; };
-		C6997F0ACE9F49152C601C2E99294939 /* dotLottieManifest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = dotLottieManifest.swift; path = Sources/dotLottieLoader/dotLottieManifest.swift; sourceTree = "<group>"; };
+		C1E12DEA275754C83548A211D728E45F /* DotLottieCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotLottieCache.swift; path = Sources/dotLottieLoader/DotLottieCache.swift; sourceTree = "<group>"; };
+		C6997F0ACE9F49152C601C2E99294939 /* DotLottieManifest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotLottieManifest.swift; path = Sources/dotLottieLoader/DotLottieManifest.swift; sourceTree = "<group>"; };
 		C70AAF1549161D10ADA188FD8C9F6A20 /* dotLottieLoader-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "dotLottieLoader-iOS-dummy.m"; sourceTree = "<group>"; };
 		CF1FD00439DF65093F14DA4B0443F571 /* dotLottieLoader-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "dotLottieLoader-iOS-prefix.pch"; sourceTree = "<group>"; };
 		D26081AA1DBE9EE06D81D43281CF3D30 /* dotLottieLoader-watchOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "dotLottieLoader-watchOS-Info.plist"; path = "../dotLottieLoader-watchOS/dotLottieLoader-watchOS-Info.plist"; sourceTree = "<group>"; };
@@ -196,7 +196,7 @@
 		DB39F4C662E831B0011F9B0E6AF8461E /* Pods-dotLottieLoader_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-dotLottieLoader_Tests.modulemap"; sourceTree = "<group>"; };
 		E6510DE49145A19B2A8854E7CB044F0E /* Pods-dotLottieLoader_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-dotLottieLoader_Example-umbrella.h"; sourceTree = "<group>"; };
 		E950EBF5B5D7FAC02225F3FABE339BC8 /* Zip-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Zip-watchOS.release.xcconfig"; path = "../Zip-watchOS/Zip-watchOS.release.xcconfig"; sourceTree = "<group>"; };
-		EDD6B767B02C0447AE546F87D2077AC4 /* Zip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Zip.framework; path = "Zip-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDD6B767B02C0447AE546F87D2077AC4 /* Zip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Zip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E6A330CB8C9A6D89FB542AB4D01F0C /* ZipUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZipUtilities.swift; path = Zip/ZipUtilities.swift; sourceTree = "<group>"; };
 		F43BD1FFDE231B8D75DC06AE7B69164C /* Zip-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Zip-watchOS.debug.xcconfig"; path = "../Zip-watchOS/Zip-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F68E17F98966D0A1C0F94B93EB282CA9 /* crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = Zip/minizip/crypt.h; sourceTree = "<group>"; };
@@ -426,7 +426,6 @@
 				F2E6A330CB8C9A6D89FB542AB4D01F0C /* ZipUtilities.swift */,
 				4085201906DE8ECBA4A79C39ECD705C7 /* Support Files */,
 			);
-			name = Zip;
 			path = Zip;
 			sourceTree = "<group>";
 		};
@@ -470,11 +469,11 @@
 		F9DFA7A61F60B34A9E3BFF96789E53C4 /* dotLottieLoader */ = {
 			isa = PBXGroup;
 			children = (
-				C1E12DEA275754C83548A211D728E45F /* dotLottieCache.swift */,
-				6509E8C84824B4846ED72833CE18A1B5 /* dotLottieFile.swift */,
-				24568ACDD338DF0BBD5482C0192F9CD0 /* dotLottieLoader.swift */,
-				C6997F0ACE9F49152C601C2E99294939 /* dotLottieManifest.swift */,
-				BC167FC21DEB21FA3EBFFF34E9BD1EC8 /* dotLottieUtils.swift */,
+				C1E12DEA275754C83548A211D728E45F /* DotLottieCache.swift */,
+				6509E8C84824B4846ED72833CE18A1B5 /* DotLottieFile.swift */,
+				24568ACDD338DF0BBD5482C0192F9CD0 /* DotLottieLoader.swift */,
+				C6997F0ACE9F49152C601C2E99294939 /* DotLottieManifest.swift */,
+				BC167FC21DEB21FA3EBFFF34E9BD1EC8 /* DotLottieUtils.swift */,
 				958A6E3898066CC5E34B027DB32AFA36 /* Pod */,
 				23BFF5E77379214D97EF8548574DA95F /* Support Files */,
 			);
@@ -791,12 +790,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08CF1BEC7460217FF073A951F6B222F8 /* dotLottieCache.swift in Sources */,
-				8C1802A2B62166C48DDCF18A961DB846 /* dotLottieFile.swift in Sources */,
+				08CF1BEC7460217FF073A951F6B222F8 /* DotLottieCache.swift in Sources */,
+				8C1802A2B62166C48DDCF18A961DB846 /* DotLottieFile.swift in Sources */,
 				FF94A034FCBFE01E3AE764E289F7B1F2 /* dotLottieLoader-iOS-dummy.m in Sources */,
-				215752BC2C637FB4A5137BB85C41E6B7 /* dotLottieLoader.swift in Sources */,
-				EB31105FC0B87C96CCB907262BF7AA93 /* dotLottieManifest.swift in Sources */,
-				305EFC8665461DE83A201F16349A7FFA /* dotLottieUtils.swift in Sources */,
+				215752BC2C637FB4A5137BB85C41E6B7 /* DotLottieLoader.swift in Sources */,
+				EB31105FC0B87C96CCB907262BF7AA93 /* DotLottieManifest.swift in Sources */,
+				305EFC8665461DE83A201F16349A7FFA /* DotLottieUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -842,12 +841,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD90F83857D771BB0CEE486046EC04B2 /* dotLottieCache.swift in Sources */,
-				BE834D2E5C60A1A5A5059829E241019A /* dotLottieFile.swift in Sources */,
+				AD90F83857D771BB0CEE486046EC04B2 /* DotLottieCache.swift in Sources */,
+				BE834D2E5C60A1A5A5059829E241019A /* DotLottieFile.swift in Sources */,
 				5538832A75AC04F1B41F5D50C68A1789 /* dotLottieLoader-watchOS-dummy.m in Sources */,
-				8F569CB52C19EA06D6A9422A30B996A5 /* dotLottieLoader.swift in Sources */,
-				C93F2D36F310D4A22571A9C1155DFA23 /* dotLottieManifest.swift in Sources */,
-				63636F2A3158789EF86C37967D99CE98 /* dotLottieUtils.swift in Sources */,
+				8F569CB52C19EA06D6A9422A30B996A5 /* DotLottieLoader.swift in Sources */,
+				C93F2D36F310D4A22571A9C1155DFA23 /* DotLottieManifest.swift in Sources */,
+				63636F2A3158789EF86C37967D99CE98 /* DotLottieUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1413,8 +1412,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 				WATCHOS_DEPLOYMENT_TARGET = 6.2;
