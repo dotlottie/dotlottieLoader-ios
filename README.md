@@ -8,7 +8,7 @@
 ## Introducing dotLottie
 
 <p align="center">
-  <img src="/Example/dotLottie/Assets/Images.xcassets/AppIcon.appiconset/dotLottie2048-1024.png" width="400">
+  <img src="https://github.com/dotlottie/dotlottie-ios/raw/master/Example/dotLottie/Assets/Images.xcassets/AppIcon.appiconset/dotLottie2048-1024.png" width="400">
 </p>
 
 dotLottie is an open-source file format that aggregates one or more Lottie files and their associated resources into a single file. They are ZIP archives compressed with the Deflate compression method and carry the file extension of ".lottie".
