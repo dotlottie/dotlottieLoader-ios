@@ -45,7 +45,7 @@ pod 'dotLottieLoader', :git => 'https://github.com/dotlottie/dotlottieLoader-ios
 ### Swift Package Manager
 
 ```swift
-.package(url: "https://github.com/dotlottie/dotLottieLoader-ios.git", from: "0.1.0")
+.package(url: "https://github.com/dotlottie/dotLottieLoader-ios.git", from: "0.1.1")
 ```
 
 ## Using dotLottie
