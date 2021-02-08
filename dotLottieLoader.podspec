@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'dotLottieLoader'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'An iOS library to natively load .lottie files https://dotlottie.io/'
 
   s.description      = <<-DESC
