@@ -81,4 +81,26 @@ public class DotLottieLoader {
             }
         }).resume()
     }
+    
+    /// Creates .lottie file from a json animation
+    /// - Parameters:
+    ///   - jsonUrl: URL to JSON lottie animation
+    ///   - loop: loop enabled
+    ///   - themeColor: theme color in HEX
+    ///   - completion: URL to .lottie file
+    public static func dotLottie(fromJsonLottieAt jsonUrl: URL, loop: Bool = true, themeColor: String = "#ffffff", completion: @escaping (URL?) -> Void) {
+        guard jsonUrl.isJsonFile else {
+            DotLottieUtils.log("Not a json file")
+            return
+        }
+        
+        guard let dotLottieUrl = DotLottieFile.compress(jsonLottieAt: jsonUrl, loop: loop, themeColor: themeColor) else {
+            DotLottieUtils.log("Failed to create dotLottie file")
+            completion(nil)
+            return
+        }
+        
+        DotLottieUtils.log("Created dotLottie file at \(dotLottieUrl.absoluteString)")
+        completion(dotLottieUrl)
+    }
 }

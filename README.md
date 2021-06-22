@@ -45,7 +45,7 @@ pod 'dotLottieLoader'
 ### Swift Package Manager
 
 ```swift
-.package(url: "https://github.com/dotlottie/dotLottieLoader-ios.git", from: "0.1.3")
+.package(url: "https://github.com/dotlottie/dotLottieLoader-ios.git", from: "0.1.4")
 ```
 
 ## Using dotLottie
@@ -73,6 +73,14 @@ DotLottieLoader.load(from: URL(string:"https://dotlottie.io/sample_files/animati
     // use dotLottieLoader.animationUrl to load the lottie animation as you normally would
 }
 ``` 
+
+##### Creating .lottie file from JSON animation file
+
+```swift
+DotLottieLoader.dotLottie(fromJsonLottieAt: URL(string: "https://assets7.lottiefiles.com/packages/lf20_6k4jsmai.json")!) { dotLottieFileUrl in
+    // share or play `dotLottieFileUrl` using [DotLottie library](https://github.com/dotlottie/dotlottie-ios) 
+}
+```
 
 ## Author
 
