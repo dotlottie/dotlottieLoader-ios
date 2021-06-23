@@ -31,6 +31,15 @@ public struct DotLottieFile {
         return localUrl.appendingPathComponent(dotLottieJson)
     }
     
+    /// Animation for specified appearance
+    /// - Parameter appearance: appearance (dark/light/custom)
+    /// - Returns: URL to animation
+    public func animationURL(for appearance: DotLottieAppearanceType) -> URL? {
+        guard let animationId = manifest?.appearance?[appearance] else { return nil }
+        let dotLottieJson = "\(DotLottieFile.animationsFolderName)/\(animationId).json"
+        return localUrl.appendingPathComponent(dotLottieJson)
+    }
+    
     /// Animations folder url
     public var animationsUrl: URL {
         localUrl.appendingPathComponent("\(DotLottieFile.animationsFolderName)")
@@ -111,7 +120,7 @@ public struct DotLottieFile {
             let animationData = try Data(contentsOf: url)
             try animationData.write(to: animationsDirectory.appendingPathComponent(fileName).appendingPathExtension("json"))
             
-            let processedAppearance = processsAppearance(forJsonLottieAt: url, appearances: appearances, fileName: fileName, animationsDirectory: animationsDirectory)
+            let processedAppearance = processAppearance(forJsonLottieAt: url, appearances: appearances, fileName: fileName, animationsDirectory: animationsDirectory)
             
             let manifest = DotLottieManifest(animations: [
                 DotLottieAnimation(loop: loop, themeColor: themeColor, speed: 1.0, id: fileName)
@@ -132,8 +141,14 @@ public struct DotLottieFile {
         }
     }
     
-    
-    private static func processsAppearance(forJsonLottieAt jsonUrl: URL, appearances: DotLottieAppearance?, fileName: String, animationsDirectory: URL) -> DotLottieAppearance {
+    /// Process appearances for animation
+    /// - Parameters:
+    ///   - jsonUrl: url of JSON lottie animation
+    ///   - appearances: Array of alternative appearances (dark/light/custom)
+    ///   - fileName: name of animation file
+    ///   - animationsDirectory: directory of animations
+    /// - Returns: DotLottieAppearance
+    private static func processAppearance(forJsonLottieAt jsonUrl: URL, appearances: DotLottieAppearance?, fileName: String, animationsDirectory: URL) -> DotLottieAppearance {
         var dotLottieAppearance: DotLottieAppearance = [.light: fileName]
         
         appearances?.forEach({
