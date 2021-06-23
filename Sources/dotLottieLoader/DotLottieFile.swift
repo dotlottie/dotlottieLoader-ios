@@ -92,11 +92,12 @@ public struct DotLottieFile {
     /// Creates dotLottieFile from animation json
     /// - Parameters:
     ///   - url: url of JSON lottie animation
+    ///   - appearances: Array of alternative appearances (dark/light/custom)
     ///   - directory: directory to save file
     ///   - loop: loop enabled
     ///   - themeColor: theme color
     /// - Returns: URL of .lottie file
-    static func compress(jsonLottieAt url: URL, in directory: URL = DotLottieUtils.tempDirectoryURL, loop: Bool = true, themeColor: String = "#ffffff") -> URL? {
+    static func compress(jsonLottieAt url: URL, appearances: DotLottieAppearance? = nil, in directory: URL = DotLottieUtils.tempDirectoryURL, loop: Bool = true, themeColor: String = "#ffffff") -> URL? {
         Zip.addCustomFileExtension(DotLottieUtils.dotLottieExtension)
         
         do {
@@ -110,9 +111,11 @@ public struct DotLottieFile {
             let animationData = try Data(contentsOf: url)
             try animationData.write(to: animationsDirectory.appendingPathComponent(fileName).appendingPathExtension("json"))
             
+            let processedAppearance = processsAppearance(forJsonLottieAt: url, appearances: appearances, fileName: fileName, animationsDirectory: animationsDirectory)
+            
             let manifest = DotLottieManifest(animations: [
                 DotLottieAnimation(loop: loop, themeColor: themeColor, speed: 1.0, id: fileName)
-            ], version: "1.0", author: "LottieFiles", generator: "LottieFiles dotLottieLoader-iOS 0.1.4")
+            ], version: "1.0", author: "LottieFiles", generator: "LottieFiles dotLottieLoader-iOS 0.1.4", appearance: processedAppearance)
             let manifestUrl = dotLottieDirectory.appendingPathComponent("manifest").appendingPathExtension("json")
             let manifestData = try manifest.encode()
             try manifestData.write(to: manifestUrl)
@@ -129,4 +132,28 @@ public struct DotLottieFile {
         }
     }
     
+    
+    private static func processsAppearance(forJsonLottieAt jsonUrl: URL, appearances: DotLottieAppearance?, fileName: String, animationsDirectory: URL) -> DotLottieAppearance {
+        var dotLottieAppearance: DotLottieAppearance = [.light: fileName]
+        
+        appearances?.forEach({
+            guard let url = URL(string: $0.value), url.isJsonFile else {
+                DotLottieUtils.log("Value for appearance \($0.key) is not a valid JSON URL")
+                return
+            }
+            
+            do {
+                let appearanceFileName = "\(fileName)-\($0.key.rawValue)"
+                let apperanceUrl = animationsDirectory.appendingPathComponent(appearanceFileName).appendingPathExtension("json")
+                let animationData = try Data(contentsOf: url)
+                try animationData.write(to: apperanceUrl)
+                
+                dotLottieAppearance[$0.key] = appearanceFileName
+            } catch {
+                DotLottieUtils.log("Could not process value for appearance: \($0.key)")
+            }
+        })
+        
+        return dotLottieAppearance
+    }
 }
