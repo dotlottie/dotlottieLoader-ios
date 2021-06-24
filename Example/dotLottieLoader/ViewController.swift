@@ -16,21 +16,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         DotLottieUtils.isLogEnabled = true
-//        DotLottieLoader.dotLottie(fromJsonLottieAt: URL(string: "https://assets7.lottiefiles.com/packages/lf20_6k4jsmai.json")!) { url in
-//            // file compressed into dotLottie
-//            guard let url = url else { return }
-//            DotLottieLoader.load(from: url) { dotLottieFile in
-//                // file decompressed from dotLottie
-//                guard let dotLottieFile = dotLottieFile else {
-//                    print("invalid dotLottie file")
-//                    return
-//                }
-//                print("dotLottieFile decompressed successfuly with \(dotLottieFile.animations.count) animation\(dotLottieFile.animations.count == 1 ? "" : "s")")
-//            }
-//        }
         
-        DotLottieLoader.dotLottie(fromJsonLottieAt: URL(string: "https://assets7.lottiefiles.com/private_files/lf30_p25uf33d.json")!,
-                                  appearances: [.dark: "https://assets8.lottiefiles.com/private_files/lf30_yiodtvs6.json"]) { url in
+        var configuration = DotLottieConfiguration(animationUrl: URL(string: "https://assets7.lottiefiles.com/private_files/lf30_p25uf33d.json")!)
+        configuration.appearances = [.dark: "https://assets8.lottiefiles.com/private_files/lf30_yiodtvs6.json"]
+        
+        DotLottieLoader.dotLottie(with: configuration) { url in
             // file compressed into dotLottie
             guard let url = url else { return }
             DotLottieLoader.load(from: url) { dotLottieFile in
