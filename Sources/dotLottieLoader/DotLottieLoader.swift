@@ -82,25 +82,4 @@ public class DotLottieLoader {
         }).resume()
     }
     
-    /// Creates .lottie file from a json animation
-    /// - Parameters:
-    ///   - configuration: configuration file
-    ///   - completion: URL to .lottie file
-    public static func dotLottie(with configuration: DotLottieConfiguration, completion: @escaping (URL?) -> Void) {
-        guard configuration.isLottie else {
-            DotLottieUtils.log("Not a json file")
-            return
-        }
-        
-        guard let dotLottieUrl = DotLottieFile.compress(with: configuration) else {
-            DotLottieUtils.log("Failed to create dotLottie file")
-            completion(nil)
-            return
-        }
-        
-        DotLottieUtils.log("Created dotLottie file at \(dotLottieUrl.absoluteString)")
-        completion(dotLottieUrl)
-    }
-    
-    // DotLottieConfiguration
 }

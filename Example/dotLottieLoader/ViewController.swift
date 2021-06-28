@@ -17,28 +17,29 @@ class ViewController: UIViewController {
         
         DotLottieUtils.isLogEnabled = true
         
-        var configuration = DotLottieConfiguration(animationUrl: URL(string: "https://assets7.lottiefiles.com/private_files/lf30_p25uf33d.json")!)
-        configuration.appearances = [.dark: "https://assets8.lottiefiles.com/private_files/lf30_yiodtvs6.json"]
+        var creator = DotLottieCreator(animationUrl: URL(string: "https://assets7.lottiefiles.com/private_files/lf30_p25uf33d.json")!)
+//        configuration.appearances = [.dark: .layerColor([
+//            DotLottieLayerColor(layer: "Love 2.Heart Outlines 2.Group 1.Stroke 1.Color", color: "#fafafa")
+//        ])]
         
-        DotLottieLoader.dotLottie(with: configuration) { url in
-            // file compressed into dotLottie
-            guard let url = url else { return }
-            DotLottieLoader.load(from: url) { dotLottieFile in
-                // file decompressed from dotLottie
-                guard let dotLottieFile = dotLottieFile else {
-                    print("invalid dotLottie file")
-                    return
-                }
-                
-                print("""
-                      dotLottieFile decompressed successfuly with:
-                      - \(dotLottieFile.animations.count) animations
-                      - \(dotLottieFile.images.count) images
-                      - \(dotLottieFile.manifest?.appearance?.count ?? 0) appearances
-                      - Light theme: \(dotLottieFile.animationURL(for: .light)?.absoluteString ?? "not defined")
-                      - Dark theme: \(dotLottieFile.animationURL(for: .dark)?.absoluteString ?? "not defined")
-                      """)
+        creator.themes = [DotLottieTheme(.dark, animation: "https://assets8.lottiefiles.com/private_files/lf30_yiodtvs6.json")]
+        
+        guard let url = creator.create() else { return }
+        DotLottieLoader.load(from: url) { dotLottieFile in
+            // file decompressed from dotLottie
+            guard let dotLottieFile = dotLottieFile else {
+                print("invalid dotLottie file")
+                return
             }
+            
+            print("""
+                  dotLottieFile decompressed successfuly with:
+                  - \(dotLottieFile.animations.count) animations
+                  - \(dotLottieFile.images.count) images
+                  - \(dotLottieFile.manifest?.themes?.count ?? 0) appearances
+                  - Light theme: \(dotLottieFile.animationURL(for: .light)?.absoluteString ?? "not defined")
+                  - Dark theme: \(dotLottieFile.animationURL(for: .dark)?.absoluteString ?? "not defined")
+                  """)
         }
     }
 

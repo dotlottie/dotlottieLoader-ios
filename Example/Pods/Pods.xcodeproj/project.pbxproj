@@ -32,8 +32,8 @@
 		63636F2A3158789EF86C37967D99CE98 /* DotLottieUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC167FC21DEB21FA3EBFFF34E9BD1EC8 /* DotLottieUtils.swift */; };
 		6ACEE2E7B99A4E1ADDDA21F9886DD833 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 045E96CC34EEC8345457CEA214262ECE /* ioapi.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6AD52FD945993536B98EE5A3C385608B /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = D798C1CF43C9E7BB81DFE49408335C1E /* zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6C9D0CDA2683540000BAA5A9 /* DotLottieConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9D0CD92683540000BAA5A9 /* DotLottieConfiguration.swift */; };
-		6C9D0CDB2683540000BAA5A9 /* DotLottieConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9D0CD92683540000BAA5A9 /* DotLottieConfiguration.swift */; };
+		6C9D0CDA2683540000BAA5A9 /* DotLottieCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9D0CD92683540000BAA5A9 /* DotLottieCreator.swift */; };
+		6C9D0CDB2683540000BAA5A9 /* DotLottieCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9D0CD92683540000BAA5A9 /* DotLottieCreator.swift */; };
 		70F87507873628BCC20217481C8F1DFA /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 0DE99ECA8C10E925D64451BC9B2D8CB1 /* ioapi.c */; };
 		72BBDC69E80CC91B382D7058D00DF634 /* dotLottieLoader-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A29D83E8A884C427D03E5D50AFA362E8 /* dotLottieLoader-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76B42F2A73659CB866C43133F3276187 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = F68E17F98966D0A1C0F94B93EB282CA9 /* crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -154,7 +154,7 @@
 		5EFF315BEE48371B60C5A5569A4BD29C /* Pods-dotLottieLoader_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-dotLottieLoader_Example-frameworks.sh"; sourceTree = "<group>"; };
 		6509E8C84824B4846ED72833CE18A1B5 /* DotLottieFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotLottieFile.swift; path = Sources/dotLottieLoader/DotLottieFile.swift; sourceTree = "<group>"; };
 		68A086C42F5FF6DD7C896F9FE2BB81FC /* Pods-dotLottieLoader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-dotLottieLoader_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		6C9D0CD92683540000BAA5A9 /* DotLottieConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotLottieConfiguration.swift; sourceTree = "<group>"; };
+		6C9D0CD92683540000BAA5A9 /* DotLottieCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotLottieCreator.swift; sourceTree = "<group>"; };
 		6F5BE91CF8B7927A645868E309E74793 /* Pods_dotLottieLoader_watchos_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dotLottieLoader_watchos_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		712A0E0C1C0C98A05E7D38560C8538B2 /* Pods_dotLottieLoader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dotLottieLoader_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		714C9CD9CD39C1F2ACEDB01DB3D0B5C7 /* dotLottieLoader-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "dotLottieLoader-watchOS.release.xcconfig"; path = "../dotLottieLoader-watchOS/dotLottieLoader-watchOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -474,7 +474,7 @@
 			children = (
 				C1E12DEA275754C83548A211D728E45F /* DotLottieCache.swift */,
 				6509E8C84824B4846ED72833CE18A1B5 /* DotLottieFile.swift */,
-				6C9D0CD92683540000BAA5A9 /* DotLottieConfiguration.swift */,
+				6C9D0CD92683540000BAA5A9 /* DotLottieCreator.swift */,
 				24568ACDD338DF0BBD5482C0192F9CD0 /* DotLottieLoader.swift */,
 				C6997F0ACE9F49152C601C2E99294939 /* DotLottieManifest.swift */,
 				BC167FC21DEB21FA3EBFFF34E9BD1EC8 /* DotLottieUtils.swift */,
@@ -799,7 +799,7 @@
 				FF94A034FCBFE01E3AE764E289F7B1F2 /* dotLottieLoader-iOS-dummy.m in Sources */,
 				215752BC2C637FB4A5137BB85C41E6B7 /* DotLottieLoader.swift in Sources */,
 				EB31105FC0B87C96CCB907262BF7AA93 /* DotLottieManifest.swift in Sources */,
-				6C9D0CDA2683540000BAA5A9 /* DotLottieConfiguration.swift in Sources */,
+				6C9D0CDA2683540000BAA5A9 /* DotLottieCreator.swift in Sources */,
 				305EFC8665461DE83A201F16349A7FFA /* DotLottieUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -851,7 +851,7 @@
 				5538832A75AC04F1B41F5D50C68A1789 /* dotLottieLoader-watchOS-dummy.m in Sources */,
 				8F569CB52C19EA06D6A9422A30B996A5 /* DotLottieLoader.swift in Sources */,
 				C93F2D36F310D4A22571A9C1155DFA23 /* DotLottieManifest.swift in Sources */,
-				6C9D0CDB2683540000BAA5A9 /* DotLottieConfiguration.swift in Sources */,
+				6C9D0CDB2683540000BAA5A9 /* DotLottieCreator.swift in Sources */,
 				63636F2A3158789EF86C37967D99CE98 /* DotLottieUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

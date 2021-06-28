@@ -32,10 +32,10 @@ public struct DotLottieFile {
     }
     
     /// Animation for specified appearance
-    /// - Parameter appearance: appearance (dark/light/custom)
+    /// - Parameter theme: theme (dark/light/custom)
     /// - Returns: URL to animation
-    public func animationURL(for appearance: DotLottieAppearanceType) -> URL? {
-        guard let animationId = manifest?.appearance?[appearance] else { return nil }
+    public func animationURL(for theme: DotLottieThemeType) -> URL? {
+        guard let animationId = manifest?.themes?.first(where: { $0.theme == theme })?.animation else { return nil }
         let dotLottieJson = "\(DotLottieFile.animationsFolderName)/\(animationId).json"
         return localUrl.appendingPathComponent(dotLottieJson)
     }
@@ -95,29 +95,6 @@ public struct DotLottieFile {
         } catch {
             DotLottieUtils.log("Extraction of dotLottie archive failed with error: \(error)")
             return false
-        }
-    }
-    
-    /// Creates dotLottieFile from animation json
-    /// - Parameters:
-    ///   - configuration: configuration for DotLottie file
-    /// - Returns: URL of .lottie file
-    static func compress(with configuration: DotLottieConfiguration) -> URL? {
-        Zip.addCustomFileExtension(DotLottieUtils.dotLottieExtension)
-        
-        do {
-            try configuration.createFolders()
-            try configuration.createAnimation()
-            try configuration.createManifest()
-            
-            try Zip.zipFiles(paths: [configuration.animationsDirectory, configuration.manifestUrl], zipFilePath: configuration.outputUrl, password: nil, compression: .DefaultCompression, progress: { progress in
-                DotLottieUtils.log("Compressing dotLottie file: \(progress)")
-            })
-            
-            return configuration.outputUrl
-        } catch {
-            DotLottieUtils.log("Extraction of dotLottie archive failed with error: \(error)")
-            return nil
         }
     }
 }

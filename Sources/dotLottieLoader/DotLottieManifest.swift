@@ -14,7 +14,7 @@ public struct DotLottieManifest: Codable {
     public var version: String
     public var author: String
     public var generator: String
-    public var appearance: DotLottieAppearance?
+    public var themes: [DotLottieTheme]?
     
     /// Decodes data to Manifest model
     /// - Parameter data: Data to decode
@@ -50,11 +50,52 @@ public struct DotLottieAnimation: Codable {
     public var id: String
 }
 
-/// Theme model for .lottie File
-public typealias DotLottieAppearance = [DotLottieAppearanceType: String]
+/*
+ {
+    "animations":[
+        {"id":"lf30_p25uf33d","speed":1,"loop":true,"themeColor":"#ffffff"}
+    ],
+    "author":"LottieFiles",
+    "generator":"LottieFiles dotLottieLoader-iOS 0.1.4",
+    "version":"1.0",
+    "themes":{
+        "light": {
+            "animation": "lf30_p25uf33d",
+            "colorSettings": [
+                {
+                    "layer": ["Love 2", "Heart Outlines 2", "Group 1", "Stroke 1", "Color"],
+                    "color": "#fafafa"
+                }
+            ]
+        }
+    }
+ }
+ */
 
-/// Type of Appearance
-public enum DotLottieAppearanceType: RawRepresentable, Equatable, Hashable, Codable {
+public struct DotLottieTheme: Codable {
+    public var theme: DotLottieThemeType
+    public var animation: String
+    public var colors: [DotLottieColorConfiguration]?
+    
+    public init(_ theme: DotLottieThemeType, animation: String, colors: [DotLottieColorConfiguration]? = nil) {
+        self.theme = theme
+        self.animation = animation
+        self.colors = colors
+    }
+}
+
+public struct DotLottieColorConfiguration: Codable {
+    public var layer: [String]
+    public var color: String
+    
+    public init(layer: [String], color: String) {
+        self.layer = layer
+        self.color = color
+    }
+}
+
+/// Type of Theme
+public enum DotLottieThemeType: RawRepresentable, Equatable, Hashable, Codable {
     case dark
     case light
     case custom(String)
@@ -77,7 +118,7 @@ public enum DotLottieAppearanceType: RawRepresentable, Equatable, Hashable, Coda
         }
     }
     
-    public static func == (lhs: DotLottieAppearanceType, rhs: DotLottieAppearanceType) -> Bool {
+    public static func == (lhs: DotLottieThemeType, rhs: DotLottieThemeType) -> Bool {
         lhs.rawValue == rhs.rawValue
     }
     
