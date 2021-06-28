@@ -18,11 +18,11 @@ class ViewController: UIViewController {
         DotLottieUtils.isLogEnabled = true
         
         var creator = DotLottieCreator(animationUrl: URL(string: "https://assets7.lottiefiles.com/private_files/lf30_p25uf33d.json")!)
-//        configuration.appearances = [.dark: .layerColor([
-//            DotLottieLayerColor(layer: "Love 2.Heart Outlines 2.Group 1.Stroke 1.Color", color: "#fafafa")
-//        ])]
         
-        creator.themes = [DotLottieTheme(.dark, animation: "https://assets8.lottiefiles.com/private_files/lf30_yiodtvs6.json")]
+        creator.themes = [
+            DotLottieTheme(.dark, animation: "https://assets8.lottiefiles.com/private_files/lf30_yiodtvs6.json"),
+            DotLottieTheme(.custom("alternative"), animation: "https://assets8.lottiefiles.com/private_files/lf30_yiodtvs6.json", colors: [.init(layer: ["Love 2", "Heart Outlines 2", "Group 1", "Stroke 1", "Color"], color: "#fafafa")])
+        ]
         
         guard let url = creator.create() else { return }
         DotLottieLoader.load(from: url) { dotLottieFile in
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
                   dotLottieFile decompressed successfuly with:
                   - \(dotLottieFile.animations.count) animations
                   - \(dotLottieFile.images.count) images
-                  - \(dotLottieFile.manifest?.themes?.count ?? 0) appearances
+                  - \(dotLottieFile.manifest?.themes?.count ?? 0) themes
                   - Light theme: \(dotLottieFile.animationURL(for: .light)?.absoluteString ?? "not defined")
                   - Dark theme: \(dotLottieFile.animationURL(for: .dark)?.absoluteString ?? "not defined")
                   """)
