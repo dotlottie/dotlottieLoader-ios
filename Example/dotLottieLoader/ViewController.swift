@@ -37,6 +37,7 @@ class ViewController: UIViewController {
                   - \(dotLottieFile.animations.count) animations
                   - \(dotLottieFile.images.count) images
                   - \(dotLottieFile.manifest?.appearance?.count ?? 0) appearances
+                  - Default animation: \(dotLottieFile.animationUrl?.absoluteString ?? "not defined")
                   - Light appearance: \(dotLottieFile.animationURL(for: .light)?.absoluteString ?? "not defined")
                   - Dark appearance: \(dotLottieFile.animationURL(for: .dark)?.absoluteString ?? "not defined")
                   """)

@@ -75,9 +75,8 @@ public struct DotLottieCreator {
             }
             
             do {
-                let fileName = url.deletingPathExtension().lastPathComponent
-                let appearanceFileName = "\(fileName)-\($0.theme.rawValue)"
-                let apperanceUrl = animationsDirectory.appendingPathComponent(appearanceFileName).appendingPathExtension("json")
+                let fileName = "\(url.deletingPathExtension().lastPathComponent)-\($0.theme.rawValue)"
+                let apperanceUrl = animationsDirectory.appendingPathComponent(fileName).appendingPathExtension("json")
                 let animationData = try Data(contentsOf: url)
                 try animationData.write(to: apperanceUrl)
                 
