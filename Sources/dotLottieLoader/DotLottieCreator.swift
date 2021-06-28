@@ -65,28 +65,60 @@ public struct DotLottieCreator {
     }
     
     /// Process appearances for animation
-    private var processedappearances: [DotLottieAppearance] {
-        var dotLottieAppearance: [DotLottieTheme: DotLottieAppearance] = [.light: DotLottieAppearance(.light, animation: fileName)]
+    private func processAppearances(_ completion: @escaping ([DotLottieAppearance]) -> Void) {
+        var appearances: [DotLottieTheme: DotLottieAppearance] = [.light: DotLottieAppearance(.light, animation: fileName)]
         
-        appearance?.forEach({
-            guard let url = URL(string: $0.animation), url.isJsonFile else {
-                DotLottieUtils.log("Value for appearance \($0.theme) is not a valid JSON URL")
+        let dispatchGroup = DispatchGroup()
+        
+        appearance?.forEach({ appearance in
+            guard let url = URL(string: appearance.animation), url.isJsonFile else {
+                DotLottieUtils.log("Value for theme \(appearance.theme) is not a valid JSON URL")
+                return
+            }
+            
+            let fileName = "\(url.deletingPathExtension().lastPathComponent)-\(appearance.theme.rawValue)"
+            let apperanceUrl = animationsDirectory.appendingPathComponent(fileName).appendingPathExtension("json")
+            
+            dispatchGroup.enter()
+            Self.download(from: url, to: apperanceUrl) { localUrl in
+                appearances[appearance.theme] = DotLottieAppearance(appearance.theme, animation: fileName, colors: appearance.colors)
+                dispatchGroup.leave()
+            }
+        })
+        
+        dispatchGroup.notify(queue: .main) {
+            completion(appearances.map({ $0.value }))
+        }
+    }
+    
+    /// Downloads file from URL and returns local URL
+    /// - Parameters:
+    ///   - url: Remote file URL
+    ///   - saveUrl: Local file URL to persist
+    ///   - completion: Local URL
+    private static func download(from url: URL, to saveUrl: URL, completion: @escaping (Bool) -> Void) {
+        // file is not remote, so just return
+        guard url.isRemoteFile else {
+            completion(true)
+            return
+        }
+        
+        DotLottieUtils.log("Downloading from url: \(url.path)")
+        URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
+            guard let data = data else {
+                DotLottieUtils.log("Failed to download data: \(error?.localizedDescription ?? "no description")")
+                completion(false)
                 return
             }
             
             do {
-                let fileName = "\(url.deletingPathExtension().lastPathComponent)-\($0.theme.rawValue)"
-                let apperanceUrl = animationsDirectory.appendingPathComponent(fileName).appendingPathExtension("json")
-                let animationData = try Data(contentsOf: url)
-                try animationData.write(to: apperanceUrl)
-                
-                dotLottieAppearance[$0.theme] = DotLottieAppearance($0.theme, animation: fileName, colors: $0.colors)
+                try data.write(to: saveUrl)
+                completion(true)
             } catch {
-                DotLottieUtils.log("Could not process value for appearance: \($0.theme)")
+                DotLottieUtils.log("Failed to save downloaded data: \(error.localizedDescription)")
+                completion(false)
             }
-        })
-        
-        return dotLottieAppearance.map({ $0.value })
+        }).resume()
     }
     
     /// Creates folders File
@@ -97,47 +129,63 @@ public struct DotLottieCreator {
     }
     
     /// Creates main animation File
-    /// - Throws: Error
-    private func createAnimation() throws {
-        let animationData = try Data(contentsOf: url)
-        try animationData.write(to: animationUrl)
+    private func createAnimation(completion: @escaping (Bool) -> Void) {
+        Self.download(from: url, to: animationUrl, completion: completion)
     }
     
     /// Creates manifest File
     /// - Throws: Error
-    private func createManifest() throws {
-        let manifest = DotLottieManifest(animations: [
-            DotLottieAnimation(loop: loop, themeColor: themeColor, speed: 1.0, id: fileName)
-        ], version: "1.0", author: "LottieFiles", generator: "LottieFiles dotLottieLoader-iOS 0.1.4", appearance: processedappearances)
-        let manifestData = try manifest.encode()
-        try manifestData.write(to: manifestUrl)
+    private func createManifest(completed: @escaping (Bool) -> Void) {
+        processAppearances { processedAppearances in
+            let manifest = DotLottieManifest(animations: [
+                DotLottieAnimation(loop: loop, themeColor: themeColor, speed: 1.0, id: fileName)
+            ], version: "1.0", author: "LottieFiles", generator: "LottieFiles dotLottieLoader-iOS 0.1.4", appearance: processedAppearances)
+            
+            do {
+                let manifestData = try manifest.encode()
+                try manifestData.write(to: manifestUrl)
+                completed(true)
+            } catch {
+                completed(false)
+            }
+        }
     }
     
     /// Creates dotLottieFile with given configurations
     /// - Parameters:
     ///   - configuration: configuration for DotLottie file
     /// - Returns: URL of .lottie file
-    public func create() -> URL? {
+    public func create(completion: @escaping (URL?) -> Void) {
         guard isLottie else {
             DotLottieUtils.log("Not a json file")
-            return nil
+            completion(nil)
+            return
         }
         
         do {
             try createFolders()
-            try createAnimation()
-            try createManifest()
-            
-            Zip.addCustomFileExtension(DotLottieUtils.dotLottieExtension)
-            try Zip.zipFiles(paths: [animationsDirectory, manifestUrl], zipFilePath: outputUrl, password: nil, compression: .DefaultCompression, progress: { progress in
-                DotLottieUtils.log("Compressing dotLottie file: \(progress)")
-            })
-            
-            DotLottieUtils.log("Created dotLottie file at \(outputUrl)")
-            return outputUrl
+            createAnimation { success in
+                guard success else { return }
+                
+                createManifest { success in
+                    guard success else { return }
+                    
+                    do {
+                        Zip.addCustomFileExtension(DotLottieUtils.dotLottieExtension)
+                        try Zip.zipFiles(paths: [animationsDirectory, manifestUrl], zipFilePath: outputUrl, password: nil, compression: .DefaultCompression, progress: { progress in
+                            DotLottieUtils.log("Compressing dotLottie file: \(progress)")
+                        })
+                        
+                        DotLottieUtils.log("Created dotLottie file at \(outputUrl)")
+                        completion(outputUrl)
+                    } catch {
+                        completion(nil)
+                    }
+                }
+            }
         } catch {
             DotLottieUtils.log("Failed to create dotLottie file \(error)")
-            return nil
+            completion(nil)
         }
     }
 }

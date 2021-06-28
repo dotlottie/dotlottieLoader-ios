@@ -78,7 +78,9 @@ DotLottieLoader.load(from: URL(string:"https://dotlottie.io/sample_files/animati
 
 ```swift
 var creator = DotLottieCreator(animationUrl: URL(string: "https://assets7.lottiefiles.com/private_files/lf30_p25uf33d.json")!)
-let urlToDotLottie = creator.create()
+creator.create { url in
+    // use url to dotLottie
+}
 ```
 
 ## Author
