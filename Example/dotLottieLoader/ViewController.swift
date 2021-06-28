@@ -19,9 +19,9 @@ class ViewController: UIViewController {
         
         var creator = DotLottieCreator(animationUrl: URL(string: "https://assets7.lottiefiles.com/private_files/lf30_p25uf33d.json")!)
         
-        creator.themes = [
-            DotLottieTheme(.dark, animation: "https://assets8.lottiefiles.com/private_files/lf30_yiodtvs6.json"),
-            DotLottieTheme(.custom("alternative"), animation: "https://assets8.lottiefiles.com/private_files/lf30_yiodtvs6.json", colors: [.init(layer: ["Love 2", "Heart Outlines 2", "Group 1", "Stroke 1", "Color"], color: "#fafafa")])
+        creator.appearance = [
+            .init(.dark, animation: "https://assets8.lottiefiles.com/private_files/lf30_yiodtvs6.json"),
+            .init(.custom("alternative"), animation: "https://assets8.lottiefiles.com/private_files/lf30_yiodtvs6.json", colors: [.init(layer: ["Love 2", "Heart Outlines 2", "Group 1", "Stroke 1", "Color"], color: "#fafafa")])
         ]
         
         guard let url = creator.create() else { return }
@@ -36,9 +36,9 @@ class ViewController: UIViewController {
                   dotLottieFile decompressed successfuly with:
                   - \(dotLottieFile.animations.count) animations
                   - \(dotLottieFile.images.count) images
-                  - \(dotLottieFile.manifest?.themes?.count ?? 0) themes
-                  - Light theme: \(dotLottieFile.animationURL(for: .light)?.absoluteString ?? "not defined")
-                  - Dark theme: \(dotLottieFile.animationURL(for: .dark)?.absoluteString ?? "not defined")
+                  - \(dotLottieFile.manifest?.appearance?.count ?? 0) appearances
+                  - Light appearance: \(dotLottieFile.animationURL(for: .light)?.absoluteString ?? "not defined")
+                  - Dark appearance: \(dotLottieFile.animationURL(for: .dark)?.absoluteString ?? "not defined")
                   """)
         }
     }

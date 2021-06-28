@@ -14,7 +14,7 @@ public struct DotLottieManifest: Codable {
     public var version: String
     public var author: String
     public var generator: String
-    public var themes: [DotLottieTheme]?
+    public var appearance: [DotLottieAppearance]?
     
     /// Decodes data to Manifest model
     /// - Parameter data: Data to decode
@@ -42,14 +42,6 @@ public struct DotLottieManifest: Codable {
     
 }
 
-/// Animation model for .lottie File
-public struct DotLottieAnimation: Codable {
-    public var loop: Bool
-    public var themeColor: String
-    public var speed: Float
-    public var id: String
-}
-
 /*
  {
     "animations":[
@@ -58,10 +50,10 @@ public struct DotLottieAnimation: Codable {
     "author":"LottieFiles",
     "generator":"LottieFiles dotLottieLoader-iOS 0.1.4",
     "version":"1.0",
-    "themes":{
+    "appearance":{
         "light": {
             "animation": "lf30_p25uf33d",
-            "colorSettings": [
+            "color": [
                 {
                     "layer": ["Love 2", "Heart Outlines 2", "Group 1", "Stroke 1", "Color"],
                     "color": "#fafafa"
@@ -71,58 +63,3 @@ public struct DotLottieAnimation: Codable {
     }
  }
  */
-
-public struct DotLottieTheme: Codable {
-    public var theme: DotLottieThemeType
-    public var animation: String
-    public var colors: [DotLottieColorConfiguration]?
-    
-    public init(_ theme: DotLottieThemeType, animation: String, colors: [DotLottieColorConfiguration]? = nil) {
-        self.theme = theme
-        self.animation = animation
-        self.colors = colors
-    }
-}
-
-public struct DotLottieColorConfiguration: Codable {
-    public var layer: [String]
-    public var color: String
-    
-    public init(layer: [String], color: String) {
-        self.layer = layer
-        self.color = color
-    }
-}
-
-/// Type of Theme
-public enum DotLottieThemeType: RawRepresentable, Equatable, Hashable, Codable {
-    case dark
-    case light
-    case custom(String)
-
-    public typealias RawValue = String
-
-    public init?(rawValue: RawValue) {
-        switch rawValue {
-        case "dark": self = .dark
-        case "light": self = .light
-        case (let value): self = .custom(value)
-        }
-    }
-
-    public var rawValue: RawValue {
-        switch self {
-        case .dark: return "dark"
-        case .light: return "light"
-        case .custom(let value): return value
-        }
-    }
-    
-    public static func == (lhs: DotLottieThemeType, rhs: DotLottieThemeType) -> Bool {
-        lhs.rawValue == rhs.rawValue
-    }
-    
-    public var hashValue: Int {
-        rawValue.hashValue
-    }
-}

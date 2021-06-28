@@ -31,11 +31,11 @@ public struct DotLottieFile {
         return localUrl.appendingPathComponent(dotLottieJson)
     }
     
-    /// Animation for specified appearance
+    /// Animation for specified theme
     /// - Parameter theme: theme (dark/light/custom)
     /// - Returns: URL to animation
-    public func animationURL(for theme: DotLottieThemeType) -> URL? {
-        guard let animationId = manifest?.themes?.first(where: { $0.theme == theme })?.animation else { return nil }
+    public func animationURL(for theme: DotLottieTheme) -> URL? {
+        guard let animationId = manifest?.appearance?.first(where: { $0.theme == theme })?.animation else { return nil }
         let dotLottieJson = "\(DotLottieFile.animationsFolderName)/\(animationId).json"
         return localUrl.appendingPathComponent(dotLottieJson)
     }

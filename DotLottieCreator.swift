@@ -16,11 +16,11 @@ public struct DotLottieCreator {
     /// Loop enabled - Default true
     public var loop: Bool = true
     
-    /// Theme color in HEX - Default #ffffff
+    /// appearance color in HEX - Default #ffffff
     public var themeColor: String = "#ffffff"
         
     /// Array of alternative appearances (dark/light/custom)
-    public var themes: [DotLottieTheme]?
+    public var appearance: [DotLottieAppearance]?
        
     /// URL to directory where we are saving the files
     public var directory: URL = DotLottieUtils.tempDirectoryURL
@@ -65,12 +65,12 @@ public struct DotLottieCreator {
     }
     
     /// Process appearances for animation
-    private var processedThemes: [DotLottieTheme] {
-        var dotLottieAppearance: [DotLottieThemeType: DotLottieTheme] = [.light: DotLottieTheme(.light, animation: fileName)]
+    private var processedappearances: [DotLottieAppearance] {
+        var dotLottieAppearance: [DotLottieTheme: DotLottieAppearance] = [.light: DotLottieAppearance(.light, animation: fileName)]
         
-        themes?.forEach({
+        appearance?.forEach({
             guard let url = URL(string: $0.animation), url.isJsonFile else {
-                DotLottieUtils.log("Value for theme \($0.theme) is not a valid JSON URL")
+                DotLottieUtils.log("Value for appearance \($0.theme) is not a valid JSON URL")
                 return
             }
             
@@ -81,9 +81,9 @@ public struct DotLottieCreator {
                 let animationData = try Data(contentsOf: url)
                 try animationData.write(to: apperanceUrl)
                 
-                dotLottieAppearance[$0.theme] = DotLottieTheme($0.theme, animation: fileName, colors: $0.colors)
+                dotLottieAppearance[$0.theme] = DotLottieAppearance($0.theme, animation: fileName, colors: $0.colors)
             } catch {
-                DotLottieUtils.log("Could not process value for theme: \($0.theme)")
+                DotLottieUtils.log("Could not process value for appearance: \($0.theme)")
             }
         })
         
@@ -109,7 +109,7 @@ public struct DotLottieCreator {
     private func createManifest() throws {
         let manifest = DotLottieManifest(animations: [
             DotLottieAnimation(loop: loop, themeColor: themeColor, speed: 1.0, id: fileName)
-        ], version: "1.0", author: "LottieFiles", generator: "LottieFiles dotLottieLoader-iOS 0.1.4", themes: processedThemes)
+        ], version: "1.0", author: "LottieFiles", generator: "LottieFiles dotLottieLoader-iOS 0.1.4", appearance: processedappearances)
         let manifestData = try manifest.encode()
         try manifestData.write(to: manifestUrl)
     }
