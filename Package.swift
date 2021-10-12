@@ -17,7 +17,7 @@ let package = Package(
             targets: ["dotLottieLoader"]),
     ],
     dependencies: [
-        .package(name: "Zip", url: "https://github.com/marmelroy/Zip.git", from: "2.0.0"),
+        .package(name: "Zip", url: "https://github.com/LottieFiles/Zip.git", from: "2.1.2"),
     ],
     targets: [
         .target(
