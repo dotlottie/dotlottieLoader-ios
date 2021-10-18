@@ -97,10 +97,18 @@ public struct DotLottieCreator {
     ///   - saveUrl: Local file URL to persist
     ///   - completion: Local URL
     private static func download(from url: URL, to saveUrl: URL, completion: @escaping (Bool) -> Void) {
-        // file is not remote, so just return
+        /// file is not remote, save the animation content to the proper same URL and return
         guard url.isRemoteFile else {
-            completion(true)
-            return
+            let animationData = try? Data(contentsOf: url)
+            do {
+                try animationData?.write(to: saveUrl)
+                completion(true)
+                return
+            } catch {
+                DotLottieUtils.log("Failed to save animation data: \(error.localizedDescription)")
+                completion(false)
+                return
+            }
         }
         
         DotLottieUtils.log("Downloading from url: \(url.path)")
