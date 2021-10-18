@@ -99,8 +99,16 @@ public struct DotLottieCreator {
     private static func download(from url: URL, to saveUrl: URL, completion: @escaping (Bool) -> Void) {
         // file is not remote, so just return
         guard url.isRemoteFile else {
-            completion(true)
-            return
+            let animationData = try? Data(contentsOf: url)
+            do {
+                try animationData?.write(to: saveUrl)
+                completion(true)
+                return
+            } catch {
+                DotLottieUtils.log("Failed to save downloaded data: \(error.localizedDescription)")
+                completion(false)
+                return
+            }
         }
         
         DotLottieUtils.log("Downloading from url: \(url.path)")
