@@ -14,7 +14,6 @@ public struct DotLottieManifest: Codable {
     public var version: String
     public var author: String
     public var generator: String
-    public var appearance: [DotLottieAppearance]?
     
     /// Decodes data to Manifest model
     /// - Parameter data: Data to decode
@@ -49,17 +48,6 @@ public struct DotLottieManifest: Codable {
     ],
     "author":"LottieFiles",
     "generator":"LottieFiles dotLottieLoader-iOS 0.1.4",
-    "version":"1.0",
-    "appearance":{
-        "light": {
-            "animation": "lf30_p25uf33d",
-            "color": [
-                {
-                    "layer": ["Love 2", "Heart Outlines 2", "Group 1", "Stroke 1", "Color"],
-                    "color": "#fafafa"
-                }
-            ]
-        }
-    }
+    "version":"1.0"
  }
  */

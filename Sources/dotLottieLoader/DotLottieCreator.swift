@@ -18,9 +18,6 @@ public struct DotLottieCreator {
     
     /// appearance color in HEX - Default #ffffff
     public var themeColor: String = "#ffffff"
-        
-    /// Array of alternative appearances (dark/light/custom)
-    public var appearance: [DotLottieAppearance]?
        
     /// URL to directory where we are saving the files
     public var directory: URL = DotLottieUtils.tempDirectoryURL
@@ -62,33 +59,6 @@ public struct DotLottieCreator {
     /// URL for output
     private var outputUrl: URL {
         directory.appendingPathComponent(fileName).appendingPathExtension("lottie")
-    }
-    
-    /// Process appearances for animation
-    private func processAppearances(_ completion: @escaping ([DotLottieAppearance]) -> Void) {
-        var appearances: [DotLottieTheme: DotLottieAppearance] = [.light: DotLottieAppearance(.light, animation: fileName)]
-        
-        let dispatchGroup = DispatchGroup()
-        
-        appearance?.forEach({ appearance in
-            guard let url = URL(string: appearance.animation), url.isJsonFile else {
-                DotLottieUtils.log("Value for theme \(appearance.theme) is not a valid JSON URL")
-                return
-            }
-            
-            let fileName = "\(url.deletingPathExtension().lastPathComponent)-\(appearance.theme.rawValue)"
-            let apperanceUrl = animationsDirectory.appendingPathComponent(fileName).appendingPathExtension("json")
-            
-            dispatchGroup.enter()
-            Self.download(from: url, to: apperanceUrl) { localUrl in
-                appearances[appearance.theme] = DotLottieAppearance(appearance.theme, animation: fileName, colors: appearance.colors)
-                dispatchGroup.leave()
-            }
-        })
-        
-        dispatchGroup.notify(queue: .main) {
-            completion(appearances.map({ $0.value }))
-        }
     }
     
     /// Downloads file from URL and returns local URL
@@ -144,18 +114,16 @@ public struct DotLottieCreator {
     /// Creates manifest File
     /// - Throws: Error
     private func createManifest(completed: @escaping (Bool) -> Void) {
-        processAppearances { processedAppearances in
-            let manifest = DotLottieManifest(animations: [
-                DotLottieAnimation(loop: loop, themeColor: themeColor, speed: 1.0, id: fileName)
-            ], version: "1.0", author: "LottieFiles", generator: "LottieFiles dotLottieLoader-iOS 0.1.4", appearance: processedAppearances)
-            
-            do {
-                let manifestData = try manifest.encode()
-                try manifestData.write(to: manifestUrl)
-                completed(true)
-            } catch {
-                completed(false)
-            }
+        let manifest = DotLottieManifest(animations: [
+            DotLottieAnimation(loop: loop, themeColor: themeColor, speed: 1.0, id: fileName)
+        ], version: "1.0", author: "LottieFiles", generator: "LottieFiles dotLottieLoader-iOS 0.1.4")
+        
+        do {
+            let manifestData = try manifest.encode()
+            try manifestData.write(to: manifestUrl)
+            completed(true)
+        } catch {
+            completed(false)
         }
     }
     

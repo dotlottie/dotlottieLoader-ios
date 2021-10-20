@@ -17,12 +17,7 @@ class ViewController: UIViewController {
         
         DotLottieUtils.isLogEnabled = true
         
-        var creator = DotLottieCreator(animationUrl: URL(string: "https://assets7.lottiefiles.com/private_files/lf30_p25uf33d.json")!)
-        
-        creator.appearance = [
-            .init(.dark, animation: "https://assets8.lottiefiles.com/private_files/lf30_yiodtvs6.json"),
-            .init(.custom("alternative"), animation: "https://assets8.lottiefiles.com/private_files/lf30_yiodtvs6.json", colors: [.init(layer: ["Love 2", "Heart Outlines 2", "Group 1", "Stroke 1", "Color"], color: "#fafafa")])
-        ]
+        let creator = DotLottieCreator(animationUrl: URL(string: "https://assets7.lottiefiles.com/private_files/lf30_p25uf33d.json")!)
         
         creator.create { url in
             guard let url = url else { return }
@@ -37,10 +32,7 @@ class ViewController: UIViewController {
                       dotLottieFile decompressed successfuly with:
                       - \(dotLottieFile.animations.count) animations
                       - \(dotLottieFile.images.count) images
-                      - \(dotLottieFile.manifest?.appearance?.count ?? 0) appearances
                       - Default animation: \(dotLottieFile.animationUrl?.absoluteString ?? "not defined")
-                      - Light appearance: \(dotLottieFile.animationURL(for: .light)?.absoluteString ?? "not defined")
-                      - Dark appearance: \(dotLottieFile.animationURL(for: .dark)?.absoluteString ?? "not defined")
                       """)
             }
         }
