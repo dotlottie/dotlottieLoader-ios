@@ -71,15 +71,9 @@ public struct DotLottieFile {
     ///   - cache: Cache type   
     /// - Returns: success true/false
     private func decompress(from url: URL, in directory: URL, cache: DotLottieCache) -> Bool {
-        guard cache.shouldDecompress(from: url) else {
-            DotLottieUtils.log("File already decompressed at \(directory.path)")
-            return true
-        }
-        
-        Zip.addCustomFileExtension(DotLottieUtils.dotLottieExtension)
-        
         do {
             try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true, attributes: nil)
+            Zip.addCustomFileExtension(DotLottieUtils.dotLottieExtension)
             try Zip.unzipFile(url, destination: directory, overwrite: true, password: nil)
             DotLottieUtils.log("File decompressed to \(directory.path)")
             return true
@@ -88,45 +82,5 @@ public struct DotLottieFile {
             return false
         }
     }
-    
-    /// Creates dotLottieFile from animation json
-    /// - Parameters:
-    ///   - url: url of JSON lottie animation
-    ///   - directory: directory to save file
-    ///   - loop: loop enabled
-    ///   - themeColor: theme color
-    /// - Returns: URL of .lottie file
-    static func compress(jsonLottieAt url: URL, in directory: URL = DotLottieUtils.tempDirectoryURL, loop: Bool = true, themeColor: String = "#ffffff") -> URL? {
-        Zip.addCustomFileExtension(DotLottieUtils.dotLottieExtension)
-        
-        do {
-            let fileName = url.deletingPathExtension().lastPathComponent
-            let dotLottieDirectory = directory.appendingPathComponent(fileName)
-            try FileManager.default.createDirectory(at: dotLottieDirectory, withIntermediateDirectories: true, attributes: nil)
-            
-            let animationsDirectory = dotLottieDirectory.appendingPathComponent("animations")
-            try FileManager.default.createDirectory(at: animationsDirectory, withIntermediateDirectories: true, attributes: nil)
-            
-            let animationData = try Data(contentsOf: url)
-            try animationData.write(to: animationsDirectory.appendingPathComponent(fileName).appendingPathExtension("json"))
-            
-            let manifest = DotLottieManifest(animations: [
-                DotLottieAnimation(loop: loop, themeColor: themeColor, speed: 1.0, id: fileName)
-            ], version: "1.0", author: "LottieFiles", generator: "LottieFiles dotLottieLoader-iOS 0.1.4")
-            let manifestUrl = dotLottieDirectory.appendingPathComponent("manifest").appendingPathExtension("json")
-            let manifestData = try manifest.encode()
-            try manifestData.write(to: manifestUrl)
-            
-            let dotLottieUrl = directory.appendingPathComponent(fileName).appendingPathExtension("lottie")
-            try Zip.zipFiles(paths: [animationsDirectory, manifestUrl], zipFilePath: dotLottieUrl, password: nil, compression: .DefaultCompression, progress: { progress in
-                DotLottieUtils.log("Compressing dotLottie file: \(progress)")
-            })
-            
-            return dotLottieUrl
-        } catch {
-            DotLottieUtils.log("Extraction of dotLottie archive failed with error: \(error)")
-            return nil
-        }
-    }
-    
 }
+

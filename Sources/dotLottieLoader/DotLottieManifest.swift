@@ -41,10 +41,13 @@ public struct DotLottieManifest: Codable {
     
 }
 
-/// Animation model for .lottie File
-public struct DotLottieAnimation: Codable {
-    public var loop: Bool
-    public var themeColor: String
-    public var speed: Float
-    public var id: String
-}
+/*
+ {
+    "animations":[
+        {"id":"lf30_p25uf33d","speed":1,"loop":true,"themeColor":"#ffffff"}
+    ],
+    "author":"LottieFiles",
+    "generator":"LottieFiles dotLottieLoader-iOS 0.1.4",
+    "version":"1.0"
+ }
+ */

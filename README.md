@@ -77,8 +77,9 @@ DotLottieLoader.load(from: URL(string:"https://dotlottie.io/sample_files/animati
 ##### Creating .lottie file from JSON animation file
 
 ```swift
-DotLottieLoader.dotLottie(fromJsonLottieAt: URL(string: "https://assets7.lottiefiles.com/packages/lf20_6k4jsmai.json")!) { dotLottieFileUrl in
-    // share or play `dotLottieFileUrl` using [DotLottie library](https://github.com/dotlottie/dotlottie-ios) 
+var creator = DotLottieCreator(animationUrl: URL(string: "https://assets7.lottiefiles.com/private_files/lf30_p25uf33d.json")!)
+creator.create { url in
+    // use url to dotLottie
 }
 ```
 
