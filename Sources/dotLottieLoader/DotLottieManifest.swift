@@ -27,7 +27,7 @@ public struct DotLottieManifest: Codable {
     /// - Parameter encoder: JSONEncoder
     /// - Throws: Error
     /// - Returns: encoded Data
-    func encode(with encoder: JSONEncoder = JSONEncoder()) throws -> Data {
+    public func encode(with encoder: JSONEncoder = JSONEncoder()) throws -> Data {
         try encoder.encode(self)
     }
 
