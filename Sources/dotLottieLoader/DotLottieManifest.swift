@@ -39,6 +39,12 @@ public struct DotLottieManifest: Codable {
         return try? decode(from: data)
     }
     
+    public init(animations: [DotLottieAnimation], version: String, author: String, generator: String) {
+        self.animations = animations
+        self.version = version
+        self.author = author
+        self.generator = generator
+    }
 }
 
 /*

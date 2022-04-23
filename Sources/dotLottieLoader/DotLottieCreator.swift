@@ -115,7 +115,7 @@ public struct DotLottieCreator {
     /// - Throws: Error
     private func createManifest(completed: @escaping (Bool) -> Void) {
         let manifest = DotLottieManifest(animations: [
-            DotLottieAnimation(loop: loop, themeColor: themeColor, speed: 1.0, id: fileName)
+            DotLottieAnimation(id: fileName, loop: loop, themeColor: themeColor, speed: 1.0)
         ], version: "1.0", author: "LottieFiles", generator: "LottieFiles dotLottieLoader-iOS 0.1.4")
         
         do {

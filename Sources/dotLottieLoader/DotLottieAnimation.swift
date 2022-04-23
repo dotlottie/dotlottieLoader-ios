@@ -8,6 +8,9 @@
 import Foundation
 
 public struct DotLottieAnimation: Codable {
+    /// Id of Animation
+    public var id: String
+    
     /// Loop enabled
     public var loop: Bool
     
@@ -17,6 +20,18 @@ public struct DotLottieAnimation: Codable {
     /// Animation Playback Speed
     public var speed: Float
     
-    /// Id of Animation
-    public var id: String
+    /// 1 or -1
+    public var direction: Int = 1
+    
+    /// mode - "bounce" | "normal"
+    public var mode: String = "normal"
+    
+    public init(id: String, loop: Bool, themeColor: String, speed: Float, direction: Int = 1, mode: String = "normal") {
+        self.id = id
+        self.loop = loop
+        self.themeColor = themeColor
+        self.speed = speed
+        self.direction = direction
+        self.mode = mode
+    }
 }
