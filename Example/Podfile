@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'dotLottieLoader_Example' do
-  platform :ios, '9.0'
+  platform :ios, '11.0'
   pod 'dotLottieLoader', :path => '../'
 
   target 'dotLottieLoader_Tests' do
