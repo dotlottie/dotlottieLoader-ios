@@ -12,21 +12,21 @@ public struct DotLottieAnimation: Codable {
     public var id: String
     
     /// Loop enabled
-    public var loop: Bool
+    public var loop: Bool?
     
     // appearance color in HEX
-    public var themeColor: String
+    public var themeColor: String?
     
     /// Animation Playback Speed
-    public var speed: Float
+    public var speed: Float?
     
     /// 1 or -1
-    public var direction: Int = 1
+    public var direction: Int?
     
     /// mode - "bounce" | "normal"
-    public var mode: String = "normal"
+    public var mode: String?
     
-    public init(id: String, loop: Bool, themeColor: String, speed: Float, direction: Int = 1, mode: String = "normal") {
+    init(id: String, loop: Bool? = nil, themeColor: String? = nil, speed: Float? = nil, direction: Int? = nil, mode: String? = nil) {
         self.id = id
         self.loop = loop
         self.themeColor = themeColor
