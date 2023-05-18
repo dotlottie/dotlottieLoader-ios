@@ -119,3 +119,80 @@ extension FileManager {
         try? contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: skipsHiddenFiles ? .skipsHiddenFiles : [])
     }
 }
+
+// MARK: - DotLottieError
+
+public enum DotLottieError: Error {
+  /// URL response has no data.
+  case noDataLoaded
+  /// Asset with this name was not found in the provided bundle.
+  case assetNotFound(name: String, bundle: Bundle?)
+  /// Animation loading from asset is not supported on macOS 10.10.
+  case loadingFromAssetNotSupported
+
+  @available(*, deprecated, message: "Unused")
+  case invalidFileFormat
+  @available(*, deprecated, message: "Unused")
+  case invalidData
+  @available(*, deprecated, message: "Unused")
+  case animationNotAvailable
+}
+
+// MARK: - Data
+
+#if canImport(UIKit)
+import UIKit
+#elseif canImport(AppKit)
+import AppKit
+#endif
+
+extension Data {
+
+  init(assetName: String, in bundle: Bundle) throws {
+    #if canImport(UIKit)
+    if let asset = NSDataAsset(name: assetName, bundle: bundle) {
+      self = asset.data
+      return
+    } else {
+      throw DotLottieError.assetNotFound(name: assetName, bundle: bundle)
+    }
+    #else
+    if #available(macOS 10.11, *) {
+      if let asset = NSDataAsset(name: assetName, bundle: bundle) {
+        self = asset.data
+        return
+      } else {
+        throw DotLottieError.assetNotFound(name: assetName, bundle: bundle)
+      }
+    }
+    throw DotLottieError.loadingFromAssetNotSupported
+    #endif
+  }
+}
+
+// MARK: - Bundle
+
+extension Bundle {
+  func dotLottieData(_ name: String, subdirectory: String? = nil) throws -> Data {
+    // Check for files in the bundle at the given path
+    let name = name.removingDotLottieSuffix()
+    if let url = url(forResource: name, withExtension: "lottie", subdirectory: subdirectory) {
+      return try Data(contentsOf: url)
+    }
+
+    let assetKey = subdirectory != nil ? "\(subdirectory ?? "")/\(name)" : name
+    return try Data(assetName: assetKey, in: self)
+  }
+}
+
+extension String {
+  fileprivate func removingDotLottieSuffix() -> String {
+    // Allow filenames to be passed with a ".lottie" extension (but not other extensions)
+    // to keep the behavior from Lottie 2.x - instead of failing to load the file
+    guard hasSuffix(".lottie") else {
+      return self
+    }
+
+    return (self as NSString).deletingPathExtension
+  }
+}
