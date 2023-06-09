@@ -21,19 +21,18 @@ class ViewController: UIViewController {
         
         creator.create { url in
             guard let url = url else { return }
-            DotLottieLoader.load(from: url) { dotLottieFile in
-                // file decompressed from dotLottie
-                guard let dotLottieFile = dotLottieFile else {
-                    print("invalid dotLottie file")
-                    return
+            DotLottieLoader.loadedFrom(url: url) { result in
+                switch result {
+                case .success(let success):
+                    print("""
+                          dotLottieFile decompressed successfuly with:
+                          - \(success.animations.count) animations
+                          - Default animation: \(success.animations.first?.animationUrl.absoluteString ?? "not defined")
+                          """)
+                case .failure(let failure):
+                    print("invalid dotLottie file: \(failure.localizedDescription)")
                 }
                 
-                print("""
-                      dotLottieFile decompressed successfuly with:
-                      - \(dotLottieFile.animations.count) animations
-                      - \(dotLottieFile.images.count) images
-                      - Default animation: \(dotLottieFile.animationUrl?.absoluteString ?? "not defined")
-                      """)
             }
         }
     }

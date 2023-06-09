@@ -6,18 +6,15 @@ class Tests: XCTestCase {
     func testLoadDotLottie() {
         let expectation = XCTestExpectation(description: "Load dotlottie file")
             
-        DotLottieLoader.load(from: URL(string: "https://dotlottie.io/sample_files/animation.lottie")!) { (lottie) in
-            XCTAssertNotNil(lottie)
-            XCTAssertNotNil(lottie?.manifest)
-            
-            XCTAssertEqual(lottie?.manifest?.animations.count, lottie?.animations.count)
-            XCTAssertEqual("\(lottie?.manifest?.animations.first?.id ?? "").json", lottie?.animations.first?.lastPathComponent)
-            XCTAssertEqual(lottie?.animationUrl, lottie?.animations.first)
-            
-            XCTAssertEqual(lottie?.animations.count, 1)
-            XCTAssertEqual(lottie?.animations.first?.lastPathComponent, "lf20_gOmta2.json")
-            
-            XCTAssertEqual(lottie?.images.count, 0)
+        DotLottieLoader.loadedFrom(url: URL(string: "https://dotlottie.io/sample_files/animation.lottie")!) { result in
+            switch result {
+            case .success(let lottie):
+                XCTAssertEqual(lottie.animations.count, 1)
+                XCTAssertEqual(lottie.animations.first?.animationUrl.lastPathComponent, "lf20_gOmta2.json")
+                
+            case .failure(let failure):
+                XCTFail("Invalid file: \(failure.localizedDescription)")
+            }
             
             expectation.fulfill()
         }
@@ -28,15 +25,15 @@ class Tests: XCTestCase {
     func testLoadDotLottieWithExternalImage() {
         let expectation = XCTestExpectation(description: "Load dotlottie file with external image")
             
-        DotLottieLoader.load(from: URL(string: "https://dotlottie.io/sample_files/animation-external-image.lottie")!) { (lottie) in
-            XCTAssertNotNil(lottie)
-            XCTAssertNotNil(lottie?.manifest)
-            
-            XCTAssertEqual(lottie?.animations.count, 1)
-            XCTAssertEqual(lottie?.animations.first?.lastPathComponent, "with_image.json")
-            
-            XCTAssertEqual(lottie?.images.count, 1)
-            XCTAssertEqual(lottie?.images.first?.lastPathComponent, "img_0.png")
+        DotLottieLoader.loadedFrom(url: URL(string: "https://dotlottie.io/sample_files/animation-external-image.lottie")!) { result in
+            switch result {
+            case .success(let lottie):
+                XCTAssertEqual(lottie.animations.count, 1)
+                XCTAssertEqual(lottie.animations.first?.animationUrl.lastPathComponent, "with_image.json")
+                
+            case .failure(let failure):
+                XCTFail("Invalid file: \(failure.localizedDescription)")
+            }
             
             expectation.fulfill()
         }
@@ -47,15 +44,15 @@ class Tests: XCTestCase {
     func testLoadDotLottieWithInlineImage() {
         let expectation = XCTestExpectation(description: "Load dotlottie file with inline image")
             
-        DotLottieLoader.load(from: URL(string: "https://dotlottie.io/sample_files/animation-inline-image.lottie")!) { (lottie) in
-            XCTAssertNotNil(lottie)
-            XCTAssertNotNil(lottie?.manifest)
-            
-            XCTAssertEqual(lottie?.animations.count, 1)
-            XCTAssertEqual(lottie?.animations.first?.lastPathComponent, "lf20_I2I090.json")
-            
-            XCTAssertEqual(lottie?.images.count, 1)
-            XCTAssertEqual(lottie?.images.first?.lastPathComponent, "image_0.png")
+        DotLottieLoader.loadedFrom(url: URL(string: "https://dotlottie.io/sample_files/animation-inline-image.lottie")!) { result in
+            switch result {
+            case .success(let lottie):
+                XCTAssertEqual(lottie.animations.count, 1)
+                XCTAssertEqual(lottie.animations.first?.animationUrl.lastPathComponent, "lf20_I2I090.json")
+                
+            case .failure(let failure):
+                XCTFail("Invalid file: \(failure.localizedDescription)")
+            }
             
             expectation.fulfill()
         }
