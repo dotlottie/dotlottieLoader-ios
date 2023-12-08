@@ -1,5 +1,5 @@
 //
-//  LRUDotLottieCache.swift
+//  LRULottieCache.swift
 //  Lottie
 //
 //  Created by Evandro Hoffmann on 20/10/22.
@@ -11,7 +11,7 @@ import Foundation
 ///
 /// Once `cacheSize` is reached, the least recently used lottie will be ejected.
 /// The default size of the cache is 100.
-public class DotLottieCache: DotLottieCacheProvider {
+public class LottieCache: LottieCacheProvider {
 
   // MARK: Lifecycle
 
@@ -22,7 +22,7 @@ public class DotLottieCache: DotLottieCacheProvider {
   // MARK: Public
 
   /// The global shared Cache.
-  public static let sharedCache = DotLottieCache()
+  public static let sharedCache = LottieCache()
 
   /// The size of the cache.
   public var cacheSize = defaultCacheCountLimit {
@@ -36,11 +36,11 @@ public class DotLottieCache: DotLottieCacheProvider {
     cache.removeAllObjects()
   }
 
-  public func file(forKey key: String) -> DotLottieFile? {
+  public func file(forKey key: String) -> LottieFile? {
     cache.object(forKey: key as NSString)
   }
 
-  public func setFile(_ lottie: DotLottieFile, forKey key: String) {
+  public func setFile(_ lottie: LottieFile, forKey key: String) {
     cache.setObject(lottie, forKey: key as NSString)
   }
 
@@ -48,6 +48,6 @@ public class DotLottieCache: DotLottieCacheProvider {
 
   private static let defaultCacheCountLimit = 100
 
-  private var cache = NSCache<NSString, DotLottieFile>()
+  private var cache = NSCache<NSString, LottieFile>()
 
 }

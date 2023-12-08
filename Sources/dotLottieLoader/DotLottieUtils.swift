@@ -90,7 +90,7 @@ extension URL {
     /// Checks if url has been decompressed
     public var isLottieFileDecompressed: Bool {
         let url = DotLottieUtils.animationsDirectoryURL(for: self)
-            .appendingPathComponent(DotLottieFile.animationsFolderName)
+            .appendingPathComponent(LottieFile.animationsFolderName)
         var isDirectory: ObjCBool = false
         if FileManager.default.fileExists(atPath: url.path, isDirectory: &isDirectory) {
             return isDirectory.boolValue

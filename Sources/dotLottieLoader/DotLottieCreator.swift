@@ -1,5 +1,5 @@
 //
-//  DotLottieConfiguration.swift
+//  LottieConfiguration.swift
 //  Pods
 //
 //  Created by Evandro Harrison Hoffmann on 23/06/2021.

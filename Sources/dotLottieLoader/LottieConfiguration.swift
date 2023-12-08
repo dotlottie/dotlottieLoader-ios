@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct DotLottieConfiguration {
+public struct LottieConfiguration {
     public var id: String
     public var imagesUrl: URL?
     public var loop: Bool

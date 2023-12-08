@@ -10,7 +10,7 @@ import Foundation
 import Zip
 
 /// Detailed .lottie file structure
-public class DotLottieFile {
+public class LottieFile {
     public static let manifestFileName: String = "manifest.json"
     public static let animationsFolderName: String = "animations"
     public static let imagesFolderName: String = "images"
@@ -19,7 +19,7 @@ public class DotLottieFile {
     
     /// Manifest.json file loading
     var manifest: DotLottieManifest? {
-        let path = fileUrl.appendingPathComponent(DotLottieFile.manifestFileName)
+        let path = fileUrl.appendingPathComponent(LottieFile.manifestFileName)
         return try? DotLottieManifest.load(from: path)
     }
     
@@ -27,13 +27,13 @@ public class DotLottieFile {
     public var animations: [Animation] = []
 
     /// Animations folder url
-    lazy var animationsUrl: URL = fileUrl.appendingPathComponent("\(DotLottieFile.animationsFolderName)")
+    lazy var animationsUrl: URL = fileUrl.appendingPathComponent("\(LottieFile.animationsFolderName)")
 
     /// All files in animations folder
     lazy var animationUrls: [URL] = FileManager.default.urls(for: animationsUrl) ?? []
 
     /// Images folder url
-    lazy var imagesUrl: URL = fileUrl.appendingPathComponent("\(DotLottieFile.imagesFolderName)")
+    lazy var imagesUrl: URL = fileUrl.appendingPathComponent("\(LottieFile.imagesFolderName)")
 
     /// All images in images folder
     lazy var imageUrls: [URL] = FileManager.default.urls(for: imagesUrl) ?? []
@@ -78,26 +78,26 @@ public class DotLottieFile {
     /// Loads file content to memory
     private func loadContent() throws {
         animations = try loadManifest().animations.map { dotLottieAnimation in
-            let configuration = DotLottieConfiguration(
+            let configuration = LottieConfiguration(
                 id: dotLottieAnimation.id,
                 imagesUrl: imagesUrl,
                 loop: dotLottieAnimation.loop ?? false,
                 speed: Double(dotLottieAnimation.speed ?? 1))
             
-            return DotLottieFile.Animation(
+            return LottieFile.Animation(
                 animationUrl: animationsUrl.appendingPathComponent("\(dotLottieAnimation.id).json"),
                 configuration: configuration)
         }
     }
     
     private func loadManifest() throws -> DotLottieManifest {
-        let path = fileUrl.appendingPathComponent(DotLottieFile.manifestFileName)
+        let path = fileUrl.appendingPathComponent(LottieFile.manifestFileName)
         return try DotLottieManifest.load(from: path)
     }
     
     public struct Animation {
         public var animationUrl: URL
-        public var configuration: DotLottieConfiguration
+        public var configuration: LottieConfiguration
     }
 }
 
